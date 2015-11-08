@@ -1,0 +1,117 @@
+H_Seg_2;PtCount;15861;Angle;0.0625573;Min_pt;0.771128;Max_pt;0.79027;Average Height;0.780699;Desk;0.223561467
+H_Seg_3;PtCount;1056;Angle;0.31216;Min_pt;0.00315797;Max_pt;0.024899;Average Height;0.014028485;Floor;0.004017206
+H_Seg_4;PtCount;1749;Angle;179.708;Min_pt;0;Max_pt;0.017694;Average Height;0.008847;Floor;0.002533433
+H_Seg_5;PtCount;22258;Angle;2.07471;Min_pt;0.544106;Max_pt;0.781756;Average Height;0.662931;Unknown;0.189837347
+H_Seg_7;PtCount;741;Angle;179.701;Min_pt;0.00680506;Max_pt;0.0177931;Average Height;0.01229908;Floor;0.003521972
+H_Seg_8;PtCount;670;Angle;179.721;Min_pt;0.00388706;Max_pt;0.019536;Average Height;0.01171153;Floor;0.003353721
+H_Seg_11;PtCount;15480;Angle;0.202709;Min_pt;0.763134;Max_pt;0.786093;Average Height;0.7746135;Desk;0.22181882
+H_Seg_13;PtCount;5176;Angle;179.844;Min_pt;0.00952101;Max_pt;0.0336521;Average Height;0.021586555;Floor;0.00618154
+H_Seg_14;PtCount;5744;Angle;179.966;Min_pt;0.000884056;Max_pt;0.018898;Average Height;0.009891028;Floor;0.002832401
+H_Seg_15;PtCount;8375;Angle;0.106531;Min_pt;0.0125281;Max_pt;0.0336081;Average Height;0.0230681;Floor;0.006605796
+H_Seg_19;PtCount;877;Angle;179.96;Min_pt;0.00852609;Max_pt;0.0291461;Average Height;0.018836095;Floor;0.005393916
+H_Seg_20;PtCount;703;Angle;0.370623;Min_pt;0.015303;Max_pt;0.0402941;Average Height;0.02779855;Floor;0.007960411
+H_Seg_22;PtCount;17939;Angle;3.339;Min_pt;0.391762;Max_pt;0.791912;Average Height;0.591837;Unknown;0.169478824
+H_Seg_24;PtCount;757;Angle;179.926;Min_pt;0.760683;Max_pt;0.776154;Desk;0.7684185;Desk;0.220044815
+H_Seg_26;PtCount;16294;Angle;0.110143;Min_pt;0.712968;Max_pt;0.795467;Average Height;0.7542175;Desk;0.215978208
+H_Seg_27;PtCount;762;Angle;7.71864;Min_pt;0.460175;Max_pt;0.51596;Average Height;0.4880675;Chair;0.139763323
+H_Seg_31;PtCount;3176;Angle;0.104678;Min_pt;0.017496;Max_pt;0.033251;Average Height;0.0253735;Floor;0.007265972
+H_Seg_32;PtCount;1388;Angle;0.0791294;Min_pt;0.014012;Max_pt;0.030267;Average Height;0.0221395;Floor;0.006339881
+H_Seg_35;PtCount;1225;Angle;0.327456;Min_pt;0.010632;Max_pt;0.0482011;Average Height;0.02941655;Floor;0.008423742
+H_Seg_37;PtCount;974;Angle;0.0766167;Min_pt;0.010359;Max_pt;0.0264441;Average Height;0.01840155;Floor;0.00526948
+H_Seg_40;PtCount;665;Angle;179.893;Min_pt;0.0183561;Max_pt;0.030705;Average Height;0.02453055;Floor;0.007024584
+H_Seg_44;PtCount;1474;Angle;0.126669;Min_pt;0.0104871;Max_pt;0.0445111;Average Height;0.0274991;Floor;0.00787466
+H_Seg_52;PtCount;1572;Angle;4.51275;Min_pt;0.448047;Max_pt;0.524268;Average Height;0.4861575;Chair;0.139216374
+H_Seg_54;PtCount;1223;Angle;0.0791294;Min_pt;0.0124041;Max_pt;0.0248311;Average Height;0.0186176;Floor;0.005331348
+H_Seg_59;PtCount;859;Angle;178.284;Min_pt;0.377269;Max_pt;0.513084;Unknown;0.4451765;Unknown;0.127481029
+H_Seg_63;PtCount;1264;Angle;179.899;Min_pt;0.00714707;Max_pt;0.0168281;Average Height;0.011987585;Floor;0.003432773
+H_Seg_66;PtCount;6217;Angle;0.683855;Min_pt;0.757189;Max_pt;0.82095;Average Height;0.7890695;Desk;0.225958449
+H_Seg_70;PtCount;829;Angle;179.435;Min_pt;0.00651801;Max_pt;0.023273;Average Height;0.014895505;Floor;0.004265486
+H_Seg_74;PtCount;14192;Angle;0.16902;Min_pt;0.703775;Max_pt;0.787482;Average Height;0.7456285;Desk;0.213518656
+H_Seg_79;PtCount;3228;Angle;0.323247;Min_pt;0.00266302;Max_pt;0.036833;Average Height;0.01974801;Floor;0.005655053
+H_Seg_84;PtCount;1012;Angle;6.4605;Min_pt;0.46831;Max_pt;0.527336;Average Height;0.497823;Chair;0.142556914
+H_Seg_87;PtCount;4894;Angle;179.273;Min_pt;0.747989;Max_pt;0.796822;Desk;0.7724055;Desk;0.221186535
+H_Seg_88;PtCount;3213;Angle;179.916;Min_pt;0.0120751;Max_pt;0.039149;Average Height;0.02561205;Floor;0.007334283
+H_Seg_90;PtCount;1779;Angle;6.20994;Min_pt;0.394878;Max_pt;0.522196;Average Height;0.458537;Chair;0.13130695
+H_Seg_93;PtCount;795;Angle;174.739;Min_pt;0.449481;Max_pt;0.52624;Chair;0.4878605;Chair;0.139704046
+H_Seg_94;PtCount;8416;Angle;0.0442347;Min_pt;0.00212598;Max_pt;0.032189;Average Height;0.01715749;Floor;0.00491323
+H_Seg_95;PtCount;1606;Angle;179.729;Min_pt;0.00330198;Max_pt;0.027704;Average Height;0.01550299;Floor;0.004439446
+H_Seg_99;PtCount;3161;Angle;179.828;Min_pt;0.012635;Max_pt;0.034103;Average Height;0.023369;Floor;0.006691962
+H_Seg_103;PtCount;637;Angle;0.328053;Min_pt;0.00745702;Max_pt;0.022992;Average Height;0.01522451;Floor;0.0043597
+H_Seg_106;PtCount;677;Angle;0.034264;Min_pt;0.010534;Max_pt;0.038844;Average Height;0.024689;Floor;0.007069958
+H_Seg_115;PtCount;993;Angle;179.905;Min_pt;3.20112;Max_pt;3.21001;Unknown;3.205565;Unknown;0.917947653
+H_Seg_122;PtCount;1360;Angle;179.841;Min_pt;0.755517;Max_pt;0.779068;Desk;0.7672925;Desk;0.219722373
+H_Seg_123;PtCount;2477;Angle;179.711;Min_pt;3.21052;Max_pt;3.22784;Unknown;3.21918;Unknown;0.921846453
+H_Seg_124;PtCount;1465;Angle;179.291;Min_pt;0.757709;Max_pt;0.783591;Desk;0.77065;Desk;0.220683829
+H_Seg_126;PtCount;632;Angle;0.520394;Min_pt;0.00799501;Max_pt;0.0294991;Average Height;0.018747055;Floor;0.005368419
+H_Seg_127;PtCount;638227;Angle;179.948;Min_pt;3.14627;Max_pt;3.28861;Unknown;3.21744;Unknown;0.921348186
+H_Seg_128;PtCount;575;Angle;176.788;Min_pt;3.21244;Max_pt;3.27477;Unknown;3.243605;Unknown;0.928840812
+H_Seg_130;PtCount;1552;Angle;8.05306;Min_pt;0.46554;Max_pt;0.545081;Average Height;0.5053105;Chair;0.144701039
+H_Seg_132;PtCount;716;Angle;0.408783;Min_pt;0.0119951;Max_pt;0.0209891;Average Height;0.0164921;Floor;0.004722688
+H_Seg_133;PtCount;8349;Angle;2.24489;Min_pt;0.460741;Max_pt;0.793134;Average Height;0.6269375;Unknown;0.179530225
+H_Seg_134;PtCount;15151;Angle;0.313412;Min_pt;0.721411;Max_pt;0.800235;Average Height;0.760823;Desk;0.217869763
+H_Seg_135;PtCount;778;Angle;179.941;Min_pt;3.19547;Max_pt;3.19826;Unknown;3.196865;Unknown;0.915456316
+H_Seg_137;PtCount;819;Angle;179.697;Min_pt;0.00638306;Max_pt;0.0259731;Average Height;0.01617808;Floor;0.004632765
+H_Seg_139;PtCount;1022;Angle;179.567;Min_pt;0.00183904;Max_pt;0.018101;Average Height;0.00997002;Floor;0.002855021
+H_Seg_140;PtCount;1240;Angle;0.492975;Min_pt;0.01398;Max_pt;0.03576;Average Height;0.02487;Floor;0.007121789
+H_Seg_141;PtCount;982;Angle;179.733;Min_pt;0.000298023;Max_pt;0.0331891;Average Height;0.016743562;Floor;0.004794697
+H_Seg_143;PtCount;2305;Angle;179.885;Min_pt;0.001387;Max_pt;0.0251991;Average Height;0.01329305;Floor;0.003806606
+H_Seg_144;PtCount;1814;Angle;179.715;Min_pt;0.00443006;Max_pt;0.029286;Average Height;0.01685803;Floor;0.004827476
+H_Seg_145;PtCount;763;Angle;179.759;Min_pt;0.761866;Max_pt;0.779512;Desk;0.770689;Desk;0.220694997
+H_Seg_146;PtCount;1310;Angle;0.228141;Min_pt;0.018676;Max_pt;0.030092;Average Height;0.024384;Floor;0.006982618
+H_Seg_148;PtCount;611;Angle;0.23239;Min_pt;0.013106;Max_pt;0.023085;Average Height;0.0180955;Floor;0.005181839
+H_Seg_149;PtCount;559;Angle;0.844878;Min_pt;0.020496;Max_pt;0.0383531;Average Height;0.02942455;Floor;0.008426033
+H_Seg_151;PtCount;693;Angle;3.49127;Min_pt;0.456334;Max_pt;0.526529;Average Height;0.4914315;Chair;0.14072664
+H_Seg_153;PtCount;4285;Angle;0.0791294;Min_pt;0.745562;Max_pt;0.784164;Average Height;0.764863;Desk;0.21902666
+H_Seg_158;PtCount;784;Angle;0.110143;Min_pt;0.0160151;Max_pt;0.031391;Average Height;0.02370305;Floor;0.006787621
+H_Seg_160;PtCount;1487;Angle;179.899;Min_pt;0.013818;Max_pt;0.0283971;Average Height;0.02110755;Floor;0.006044372
+H_Seg_161;PtCount;789;Angle;0.344917;Min_pt;0.0115;Max_pt;0.0251601;Average Height;0.01833005;Floor;0.005249005
+H_Seg_164;PtCount;2484;Angle;179.881;Min_pt;0.015475;Max_pt;0.0366781;Average Height;0.02607655;Floor;0.007467298
+H_Seg_166;PtCount;622;Angle;1.62209;Min_pt;3.19743;Max_pt;3.22436;Average Height;3.210895;Unknown;0.919473955
+H_Seg_171;PtCount;511;Angle;5.76725;Min_pt;3.12637;Max_pt;3.2118;Average Height;3.169085;Unknown;0.907501217
+H_Seg_175;PtCount;565;Angle;3.83339;Min_pt;0.468611;Max_pt;0.531479;Average Height;0.500045;Chair;0.143193208
+H_Seg_179;PtCount;1919;Angle;0.633965;Min_pt;3.21591;Max_pt;3.23306;Average Height;3.224485;Unknown;0.923365597
+H_Seg_180;PtCount;550;Angle;7.13039;Min_pt;0.468621;Max_pt;0.525182;Average Height;0.4969015;Chair;0.142293033
+H_Seg_184;PtCount;930;Angle;179.956;Min_pt;0.010645;Max_pt;0.019601;Average Height;0.015123;Floor;0.004330632
+H_Seg_185;PtCount;776;Angle;171.008;Min_pt;0.35273;Max_pt;0.513482;Unknown;0.433106;Unknown;0.124024512
+H_Seg_186;PtCount;1248;Angle;0.524141;Min_pt;0.0165831;Max_pt;0.037837;Average Height;0.02721005;Floor;0.007791887
+H_Seg_187;PtCount;787;Angle;1.06091;Min_pt;0.017517;Max_pt;0.04497;Average Height;0.0312435;Floor;0.008946909
+H_Seg_188;PtCount;694;Angle;5.54228;Min_pt;0.457848;Max_pt;0.511971;Average Height;0.4849095;Chair;0.138858996
+H_Seg_191;PtCount;787;Angle;0.752515;Min_pt;0.755546;Max_pt;0.783861;Average Height;0.7697035;Desk;0.220412789
+H_Seg_192;PtCount;801;Angle;178.249;Min_pt;3.2137;Max_pt;3.22377;Unknown;3.218735;Unknown;0.921719023
+H_Seg_195;PtCount;2328;Angle;5.33146;Min_pt;0.351087;Max_pt;0.521861;Average Height;0.436474;Unknown;0.124988975
+H_Seg_197;PtCount;1077;Angle;0.432959;Min_pt;0.771333;Max_pt;0.790348;Average Height;0.7808405;Desk;0.223601987
+H_Seg_198;PtCount;3516;Angle;0.181308;Min_pt;0.767243;Max_pt;0.788559;Average Height;0.777901;Desk;0.22276023
+H_Seg_199;PtCount;716;Angle;1.07575;Min_pt;0.014961;Max_pt;0.034847;Average Height;0.024904;Floor;0.007131525
+H_Seg_200;PtCount;3392;Angle;179.941;Min_pt;0.746521;Max_pt;0.78722;Desk;0.7668705;Desk;0.219601529
+H_Seg_201;PtCount;554;Angle;0.111906;Min_pt;0.01373;Max_pt;0.0198491;Average Height;0.01678955;Floor;0.004807866
+H_Seg_206;PtCount;2097;Angle;0.206534;Min_pt;0.003286;Max_pt;0.018509;Average Height;0.0108975;Floor;0.003120615
+H_Seg_209;PtCount;9785;Angle;0.0484566;Min_pt;0.002074;Max_pt;0.030669;Average Height;0.0163715;Floor;0.004688153
+H_Seg_211;PtCount;605;Angle;179.394;Min_pt;0.025336;Max_pt;0.0378361;Average Height;0.03158605;Floor;0.009045002
+H_Seg_213;PtCount;2529;Angle;179.909;Min_pt;0.00932801;Max_pt;0.018783;Average Height;0.014055505;Floor;0.004024943
+H_Seg_214;PtCount;1443;Angle;175.98;Min_pt;0.471652;Max_pt;0.535651;Chair;0.5036515;Chair;0.144225967
+H_Seg_216;PtCount;643;Angle;171.692;Min_pt;0.46863;Max_pt;0.535323;Chair;0.5019765;Chair;0.143746313
+H_Seg_219;PtCount;668;Angle;9.93068;Min_pt;0.460973;Max_pt;0.514452;Average Height;0.4877125;Chair;0.139661665
+H_Seg_220;PtCount;2208;Angle;3.11081;Min_pt;0.431835;Max_pt;0.522125;Average Height;0.47698;Chair;0.136588299
+H_Seg_222;PtCount;1419;Angle;179.677;Min_pt;0.764677;Max_pt;0.790312;Desk;0.7774945;Desk;0.222643825
+H_Seg_223;PtCount;1423;Angle;176.279;Min_pt;0.462283;Max_pt;0.534162;Chair;0.4982225;Chair;0.142671315
+H_Seg_225;PtCount;859;Angle;179.157;Min_pt;0.750985;Max_pt;0.785322;Desk;0.7681535;Desk;0.21996893
+H_Seg_227;PtCount;2210;Angle;178.723;Min_pt;0.422241;Max_pt;0.525123;Chair;0.473682;Chair;0.135643882
+H_Seg_231;PtCount;629;Angle;179.622;Min_pt;0.012553;Max_pt;0.0169871;Average Height;0.01477005;Floor;0.004229561
+H_Seg_232;PtCount;18491;Angle;0.227282;Min_pt;0.0150831;Max_pt;0.030602;Average Height;0.02284255;Floor;0.006541207
+H_Seg_236;PtCount;602;Angle;0.621496;Min_pt;0.00744605;Max_pt;0.022262;Average Height;0.014854025;Floor;0.004253608
+H_Seg_238;PtCount;1200;Angle;179.806;Min_pt;0.010381;Max_pt;0.022594;Average Height;0.0164875;Floor;0.004721371
+H_Seg_239;PtCount;2320;Angle;3.57473;Min_pt;0.454408;Max_pt;0.522615;Average Height;0.4885115;Chair;0.139890467
+H_Seg_244;PtCount;1959;Angle;0.348866;Min_pt;0.00607002;Max_pt;0.013062;Average Height;0.00956601;Floor;0.002739329
+H_Seg_245;PtCount;1242;Angle;179.764;Min_pt;0.782481;Max_pt;0.794716;Desk;0.7885985;Desk;0.225823573
+H_Seg_246;PtCount;764;Angle;2.8658;Min_pt;3.19487;Max_pt;3.22157;Average Height;3.20822;Unknown;0.918707941
+H_Seg_248;PtCount;945;Angle;179.375;Min_pt;0.00317204;Max_pt;0.0201;Average Height;0.01163602;Floor;0.003332098
+H_Seg_249;PtCount;1103;Angle;177.025;Min_pt;0.431625;Max_pt;0.513797;Chair;0.472711;Chair;0.135365826
+H_Seg_250;PtCount;1487;Angle;1.43081;Min_pt;0.398247;Max_pt;0.521268;Average Height;0.4597575;Chair;0.131656453
+H_Seg_252;PtCount;570;Angle;0.899616;Min_pt;0.00594401;Max_pt;0.030346;Average Height;0.018145005;Floor;0.005196015
+H_Seg_264;PtCount;1729;Angle;179.778;Min_pt;0.011247;Max_pt;0.015738;Average Height;0.0134925;Floor;0.003863721
+H_Seg_267;PtCount;1091;Angle;0.205584;Min_pt;0.010601;Max_pt;0.016041;Average Height;0.013321;Floor;0.00381461
+H_Seg_277;PtCount;649;Angle;2.32978;Min_pt;3.13974;Max_pt;3.16236;Average Height;3.15105;Unknown;0.902336703
+H_Seg_279;PtCount;1362;Angle;7.59332;Min_pt;2.6062;Max_pt;2.64117;Average Height;2.623685;Unknown;0.751320123
+H_Seg_281;PtCount;562;Angle;2.75889;Min_pt;3.1849;Max_pt;3.19378;Average Height;3.18934;Unknown;0.913301452
+H_Seg_284;PtCount;957;Angle;179.697;Min_pt;3.48696;Max_pt;3.49724;Unknown;3.4921;Unknown;1
+H_Seg_285;PtCount;869;Angle;0.257171;Min_pt;3.30919;Max_pt;3.31599;Average Height;3.31259;Unknown;0.948595401
