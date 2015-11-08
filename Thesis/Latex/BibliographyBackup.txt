@@ -1,0 +1,1203 @@
+
+@misc{phones_infographic:_2012,
+	title = {Infographic: 4.4 {Billion} {Camera} {Phones}...},
+	shorttitle = {Infographic},
+	year = 2012,
+	url = {\url{http://www.statista.com/chart/653/prevalence-of-selected-features-in-the-global-installed-base-of-mobile-phones/}},
+	abstract = {Today’s chart shows the prevalence of selected features in the global installed base of mobile phones.},
+	note = {Accessed 26 October 2015},
+	journal = {Statista Infographics},
+	author = {phones, Today’s chart shows the prevalence of selected features in the global installed base of mobile},
+	file = {Snapshot:C\:\\Users\\jayre\\AppData\\Roaming\\Zotero\\Zotero\\Profiles\\oc3m13jx.default\\zotero\\storage\\5WRN3NUN\\phones - Infographic 4.4 Billion Camera Phones....html:text/html}
+}
+
+@misc{13thlab_visual_2013,
+	title = {Visual {SLAM} {Car} {Navigation}},
+	url = {\url{https://www.youtube.com/watch?v=Q3EMgGI6E5s}},
+	note = {Accessed 10 October 2015},
+	author = {{13thLab}},
+	month = oct,
+	year = {2013}
+}
+
+@inproceedings{veloso_focus:_2006,
+	title = {Focus: a generalized method for object discovery for robots that observe and interact with humans},
+	shorttitle = {Focus},
+	url = {\url{http://dl.acm.org/citation.cfm?id=1121261}},
+	note = {Accessed 6 October 2015},
+	booktitle = {Proceedings of the 1st {ACM} {SIGCHI}/{SIGART} conference on {Human}-robot interaction},
+	publisher = {ACM},
+	author = {Veloso, Manuela M. and Rybski, Paul E. and Von Hundelshausen, Felix},
+	year = {2006},
+	pages = {102--109}
+}
+
+@techreport{anon._vision_2011,
+	address = {Provo, Utah, United States},
+	title = {Vision {Recognition}},
+	url = {\url{http://rwbclasses.groups.et.byu.net/lib/exe/fetch.php?media=campus_challenge:vr_documentation.pdf}},
+	note = {Accesssed October 14th, 2015},
+	institution = {Brigham Young University, Department of Electrical and Computer Engineering},
+	author = {Anon.},
+	month = apr,
+	year = {2011}
+}
+
+@misc{goldstein_report:_2014,
+	title = {Report: {Global} smartphone penetration to jump 25\% in 2014, led by {Asia}-{Pacific}},
+	shorttitle = {Report},
+	url = {\url{http://www.fiercewireless.com/story/report-global-smartphone-penetration-jump-25-2014-led-asia-pacific/2014-06-11}},
+	abstract = {The number of people using smartphones around the globe will continue to accelerate in 2014, growing to 1.76 billion people--up more than 25 percent over 2013, according to a new report from eMarketer. Around 1.4 billion people owned and used smartphone monthly worldwide in 2013, according to the firm.},
+	note = {Accessed 16 October 2015},
+	journal = {FierceWireless},
+	author = {Goldstein, Phil},
+	month = jun,
+	year = {2014},
+	file = {Snapshot:C\:\\Users\\jayre\\AppData\\Roaming\\Zotero\\Zotero\\Profiles\\oc3m13jx.default\\zotero\\storage\\KAM3NZCM\\2014-06-11.html:text/html}
+}
+
+@misc{unknown_registration_????,
+	title = {Registration, {Best} {Fit}, {Alignment}, {RPS}...},
+	url = {\url{http://www.3dreshaper.com/en1/En_alignment.htm}},
+	note = {Accessed 13 October 2015},
+	journal = {3D Reshaper. The 3D Scanner Software},
+	author = {Unknown}
+}
+
+@inproceedings{seitz_comparison_2006,
+	title = {A comparison and evaluation of multi-view stereo reconstruction algorithms},
+	volume = {1},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1640800}},
+	note = {Accessed 9 October 2015},
+	booktitle = {Computer vision and pattern recognition, 2006 {IEEE} {Computer} {Society} {Conference} on},
+	publisher = {IEEE},
+	author = {Seitz, Steven M. and Curless, Brian and Diebel, James and Scharstein, Daniel and Szeliski, Richard},
+	year = {2006},
+	pages = {519--528}
+}
+
+@misc{davidson-pilon_machine_2012,
+	title = {machine learning - {What} is "feature space"? - {Cross} {Validated}},
+	shorttitle = {machine learning - {What} is "feature space"?},
+	url = {\url{http://stats.stackexchange.com/questions/46425/what-is-feature-space}},
+	note = {Accessed 6 October 2015},
+	journal = {StackExchange},
+	author = {Davidson-Pilon, Cam},
+	month = dec,
+	year = {2012}
+}
+
+@article{shin_unsupervised_2012,
+	title = {Unsupervised {Construction} of an {Indoor} {Floor} {Plan} {Using} a {Smartphone}},
+	volume = {42},
+	issn = {1094-6977},
+	doi = {10.1109/TSMCC.2011.2169403},
+	number = {6},
+	journal = {IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews},
+	author = {Shin, Hyojeong and Chon, Yohan and Cha, Hojung},
+	month = nov,
+	year = {2012},
+	pages = {889--898}
+}
+
+@article{davison_sequential_2001,
+	title = {Sequential localisation and map-building for real-time computer vision and robotics},
+	volume = {36},
+	url = {\url{http://www.sciencedirect.com/science/article/pii/S0921889001001415}},
+	number = {4},
+	note = {Accessed 15 October 2015},
+	journal = {Robotics and Autonomous Systems},
+	author = {Davison, Andrew J. and Kita, Nobuyuki},
+	year = {2001},
+	pages = {171--183}
+}
+
+@article{rusu_towards_2008,
+	series = {Semantic {Knowledge} in {Robotics}},
+	title = {Towards 3D {Point} cloud based object maps for household environments},
+	volume = {56},
+	issn = {0921-8890},
+	url = {\url{http://www.sciencedirect.com/science/article/pii/S0921889008001140}},
+	doi = {10.1016/j.robot.2008.08.005},
+	number = {11},
+	note = {Accessed 28 September 2015},
+	journal = {Robotics and Autonomous Systems},
+	author = {Rusu, Radu Bogdan and Marton, Zoltan Csaba and Blodow, Nico and Dolha, Mihai and Beetz, Michael},
+	month = nov,
+	year = {2008},
+	pages = {927-941}
+}
+
+@inproceedings{mouragnon_real_2006,
+	title = {Real {Time} {Localization} and 3D {Reconstruction}},
+	volume = {1},
+	doi = {10.1109/CVPR.2006.236},
+	booktitle = {2006 {IEEE} {Computer} {Society} {Conference} on {Computer} {Vision} and {Pattern} {Recognition}},
+	author = {Mouragnon, E. and Lhuillier, M. and Dhome, M. and Dekeyser, F. and Sayd, P.},
+	year = {2006},
+	pages = {363--370}
+}
+
+@techreport{insider_drones_2015,
+	title = {{THE} {DRONES} {REPORT}: {Market} forecasts, regulatory barriers, top vendors, and leading commercial applications},
+	shorttitle = {{THE} {DRONES} {REPORT}},
+	url = {\url{http://www.businessinsider.com/uav-or-commercial-drone-market-forecast-2015-2}},
+	note = {Accessed 26 October 2015},
+	author = {Insider, Business},
+	month = may,
+	year = {2015},
+	pages = {39, 564}
+}
+
+@book{sadiku_signals_2015,
+	title = {Signals and {Systems}: {A} {Primer} with {MATLAB}®},
+	isbn = {978-1-138-02682-7},
+	shorttitle = {Signals and {Systems}},
+	language = {en},
+	publisher = {CRC Press},
+	author = {Sadiku, Matthew N. O. and Ali, Warsame Hassan},
+	month = oct,
+	year = {2015}
+}
+
+@misc{_choosing_2004,
+	title = {Choosing the {Right} {Ergonomic} {Office} {Chair}},
+	url = {\url{http://www.spine-health.com/wellness/ergonomics/office-chair-choosing-right-ergonomic-office-chair}},
+	abstract = {An ergonomic office chair provides lower back support, promotes good posture and helps alleviate back pain. Learn how to decide on the best office chair.},
+	year = {2004},
+	note = {Accessed 25 October 2015},
+	journal = {Spine-health}
+}
+
+@inproceedings{rusu_fast_2010,
+	title = {Fast 3D recognition and pose using the {Viewpoint} {Feature} {Histogram}},
+	doi = {10.1109/IROS.2010.5651280},
+	booktitle = {2010 {IEEE}/{RSJ} {International} {Conference} on {Intelligent} {Robots} and {Systems} ({IROS})},
+	author = {Rusu, R.B. and Bradski, G. and Thibaux, R. and Hsu, J.},
+	month = oct,
+	year = {2010},
+	pages = {2155-2162}
+}
+
+@misc{_nist_2011,
+	type = {Blog},
+	title = {{NIST} and {Willow} {Garage}: {Solutions} in {Perception} {Challenge}},
+	url = {\url{http://www.willowgarage.com/sites/default/files/Object3DTextures.jpg}},
+	note = {Accessed 28 September 2015},
+	journal = {Willow Garage Blog},
+	month = march,
+	year = {2011}
+}
+
+@article{mirzaei_kalman_2008,
+	title = {A {Kalman} {Filter}-{Based} {Algorithm} for {IMU}-{Camera} {Calibration}: {Observability} {Analysis} and {Performance} {Evaluation}},
+	volume = {24},
+	issn = {1552-3098},
+	shorttitle = {A {Kalman} {Filter}-{Based} {Algorithm} for {IMU}-{Camera} {Calibration}},
+	doi = {10.1109/TRO.2008.2004486},
+	number = {5},
+	journal = {IEEE Transactions on Robotics},
+	author = {Mirzaei, F.M. and Roumeliotis, S.I.},
+	month = oct,
+	year = {2008},
+	pages = {1143--1156}
+}
+
+@inproceedings{rusu_3d_2011,
+	title = {3D is here: {Point} {Cloud} {Library} ({PCL})},
+	shorttitle = {3D is here},
+	doi = {10.1109/ICRA.2011.5980567},
+	booktitle = {2011 {IEEE} {International} {Conference} on {Robotics} and {Automation} ({ICRA})},
+	author = {Rusu, R.B. and Cousins, S.},
+	month = may,
+	year = {2011},
+	pages = {1-4}
+}
+
+@misc{wakefield_one_2014,
+	title = {One wi-fi hotspot for every 150 people, says study},
+	url = {\url{http://www.bbc.com/news/technology-29726632}},
+	note = {Accessed 16 October 2015},
+	journal = {BBC News},
+	author = {Wakefield, Jane and News, B. B. C.},
+	month = nov,
+	year = {2014}}
+}
+
+@article{schnabel_efficient_2007,
+	title = {Efficient {RANSAC} for {Point}-{Cloud} {Shape} {Detection}},
+	volume = {26},
+	issn = {1467-8659},
+	url = {\url{http://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.2007.01016.x/abstract}},
+	doi = {10.1111/j.1467-8659.2007.01016.x},
+	number = {2},
+	note = {Accessed 26 September 2015},
+	journal = {Computer Graphics Forum},
+	author = {Schnabel, R. and Wahl, R. and Klein, R.},
+	month = jun,
+	year = {2007},
+	pages = {214--226}
+}
+
+@article{rashidi_generating_2014,
+	title = {Generating {Absolute}-{Scale} {Point} {Cloud} {Data} of {Built} {Infrastructure} {Scenes} {Using} a {Monocular} {Camera} {Setting}},
+	volume = {0},
+	issn = {0887-3801},
+	url = {\url{http://dx.doi.org/10.1061/(ASCE)CP.1943-5487.0000414}},
+	number = {0},
+	note = {Accessed 15 October 2015},
+	journal = {Journal of Computing in Civil Engineering},
+	author = {Rashidi, Abbas and Brilakis, Ioannis and Vela, Patricio},
+	month = jul,
+	year = {2014},
+	pages = {04014089}
+}
+
+@misc{penelope_image_2013,
+	title = {image processing - {Object} detection versus object recognition - {Signal} {Processing} {Stack} {Exchange}},
+	url = {\url{http://dsp.stackexchange.com/questions/12940/object-detection-versus-object-recognition}},
+	note = {Accessed 14 October 2015},
+	author = {Penelope},
+	month = nov,
+	year = {2013}
+}
+
+@article{tangelder_survey_2007,
+	title = {A survey of content based 3D shape retrieval methods},
+	volume = {39},
+	issn = {1380-7501, 1573-7721},
+	url = {\url{http://link.springer.com/article/10.1007/s11042-007-0181-0}},
+	doi = {10.1007/s11042-007-0181-0},
+	language = {en},
+	number = {3},
+	note = {Accessed 5 October 2015},
+	journal = {Multimedia Tools and Applications},
+	author = {Tangelder, Johan W. H. and Veltkamp, Remco C.},
+	month = dec,
+	year = {2007},
+	pages = {441--471}
+}
+
+@incollection{lai_rgb-d_2013,
+	title = {{RGB}-{D} object recognition: {Features}, algorithms, and a large scale benchmark},
+	shorttitle = {{RGB}-{D} object recognition},
+	url = {\url{http://link.springer.com/chapter/10.1007/978-1-4471-4640-7_9}},
+	note = {Accessed 14 October 2015},
+	booktitle = {Consumer {Depth} {Cameras} for {Computer} {Vision}},
+	publisher = {Springer},
+	author = {Lai, Kevin and Bo, Liefeng and Ren, Xiaofeng and Fox, Dieter},
+	year = {2013},
+	pages = {167--192}
+}
+
+@techreport{mccann_3d_2015,
+	title = {3D {Reconstruction} from {Multiple} {Images}},
+	url = {\url{http://cs.nyu.edu/~fergus/teaching/vision_2012/6_Multiview_SfM.pdf}},
+	institution = {Stanford University},
+	author = {McCann, Shawn},
+	month = jan,
+	year = {2015}
+}
+
+@misc{_global_????,
+	title = {Global smartphone user penetration 2011-2018 {\textbar} {Statistic}},
+	url = {\url{http://www.statista.com/statistics/203734/global-smartphone-penetration-per-capita-since-2005/}},
+	abstract = {The statistic depicts the global smartphone penetration per capita from 2011 to 2018. In 2011, the global smartphone penetration per capita was 9.6 percent. In 2017, the global smartphone penetration per capita is projected to reach 34.2 percent.},
+	note = {Accessed 16 October 2015},
+	journal = {Statista}
+}
+
+@inproceedings{funkhouser_shape-based_2004,
+	address = {New York, NY, USA},
+	series = {{SIGGRAPH} '04},
+	title = {Shape-based {Retrieval} and {Analysis} of 3D {Models}},
+	url = {\url{http://doi.acm.org/10.1145/1103900.1103916}},
+	doi = {10.1145/1103900.1103916},
+	note = {Accessed 5 October 2015},
+	booktitle = {{ACM} {SIGGRAPH} 2004 {Course} {Notes}},
+	publisher = {ACM},
+	author = {Funkhouser, Thomas and Kazhdan, Michael},
+	year = {2004}
+}
+
+@inproceedings{serra_indoor_2010,
+	address = {New York, NY, USA},
+	series = {{MobileHCI} '10},
+	title = {Indoor {Pedestrian} {Navigation} {System} {Using} a {Modern} {Smartphone}},
+	isbn = {978-1-60558-835-3},
+	url = {\url{http://doi.acm.org/10.1145/1851600.1851683}},
+	doi = {10.1145/1851600.1851683},
+	note = {Accessed 16 October 2015},
+	booktitle = {Proceedings of the 12th {International} {Conference} on {Human} {Computer} {Interaction} with {Mobile} {Devices} and {Services}},
+	publisher = {ACM},
+	author = {Serra, Alberto and Carboni, Davide and Marotto, Valentina},
+	year = {2010},
+	keywords = {accelerometer, compass, dead reckoning, indoor navigation, map},
+	pages = {397--398}
+}
+
+@misc{richter_infographic:_2012,
+	title = {Infographic: 4.4 {Billion} {Camera} {Phones}...},
+	shorttitle = {Infographic},
+	url = { \url{http://www.statista.com/chart/653/prevalence-of-selected-features-in-the-global-installed-base-of-mobile-phones/}},
+	note = {Accessed 26 October 2015},
+	journal = {Statista Infographics},
+	author = {Richter, Felix},
+	month = oct,
+	year = {2012}
+}
+
+@inproceedings{takacs_outdoors_2008,
+	title = {Outdoors augmented reality on mobile phone using loxel-based visual feature organization},
+	url = {\url{http://dl.acm.org/citation.cfm?id=1460165}},
+	note = {Accessed 26 October 2015},
+	booktitle = {Proceedings of the 1st {ACM} international conference on {Multimedia} information retrieval},
+	publisher = {ACM},
+	author = {Takacs, Gabriel and Chandrasekhar, Vijay and Gelfand, Natasha and Xiong, Yingen and Chen, Wei-Chao and Bismpigiannis, Thanos and Grzeszczuk, Radek and Pulli, Kari and Girod, Bernd},
+	year = {2008},
+	pages = {427--434}
+}
+
+@article{viola_robust_2001,
+	title = {Robust real-time object detection},
+	volume = {4},
+	url = {\url{http://www.hpl.hp.com/techreports/Compaq-DEC/CRL-2001-1.pdf}},
+	note = {Accessed 6 October 2015},
+	journal = {International Journal of Computer Vision},
+	author = {Viola, Paul and Jones, Michael},
+	year = {2001},
+	pages = {51--52}
+}
+
+@inproceedings{papageorgiou_general_1998,
+	title = {A general framework for object detection},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=710772}},
+	note = {Accessed 6 October 2015},
+	booktitle = {Computer vision, 1998. sixth international conference on},
+	publisher = {IEEE},
+	author = {Papageorgiou, Constantine P. and Oren, Michael and Poggio, Tomaso},
+	year = {1998},
+	pages = {555--562},
+}
+
+@article{rosenfeld_edge_1971,
+	title = {Edge and {Curve} {Detection} for {Visual} {Scene} {Analysis}},
+	volume = {C-20},
+	issn = {0018-9340},
+	doi = {10.1109/T-C.1971.223290},
+	number = {5},
+	journal = {IEEE Transactions on Computers},
+	author = {Rosenfeld, Azriel and Thurston, M.},
+	month = may,
+	year = {1971},
+	keywords = {Contracts, Curve detection, edge detection, Gestalt psychology, scene analysis, spot detection, streak detection, texture discrimination, visual perception., Humans, Image analysis, Image edge detection, Image processing, Layout, Object detection, Psychology, Visual perception, Visual system},
+	pages = {562--569}
+}
+
+@inproceedings{mostofi_indoor_2014,
+	title = {Indoor localization and mapping using camera and inertial measurement unit ({IMU})},
+	doi = {10.1109/PLANS.2014.6851507},
+	booktitle = {Position, {Location} and {Navigation} {Symposium} - {PLANS} 2014, 2014 {IEEE}/{ION}},
+	author = {Mostofi, N. and Elhabiby, M. and El-Sheimy, N.},
+	month = may,
+	year = {2014},
+	pages = {1329--1335}
+}
+
+@misc{david_sachs_sensor_2010,
+	title = {Sensor {Fusion} on {Android} {Devices}: {A} {Revolution} in {Motion} {Processing}},
+	shorttitle = {Sensor {Fusion} on {Android} {Devices}},
+	url = {\url{https://www.youtube.com/watch?v=C7JQ7Rpwn2k&feature=youtu.be&t=23m21s}},
+	note = {Accessed 16 October 2015},
+	author = {{David Sachs}},
+	collaborator = {{GoogleTechTalks}},
+	month = aug,
+	year = {2010}
+}
+
+@misc{_content-based_2015,
+	title = {Content-based image retrieval},
+	copyright = {Creative Commons Attribution-ShareAlike License},
+	url = {\url{https://en.wikipedia.org/w/index.php?title=Content-based_image_retrieval&oldid=680214585}},
+	language = {en},
+	note = {Accessed 5 October 2015},
+	journal = {Wikipedia, the free encyclopedia},
+	month = sep,
+	year = {2015},
+	note = {Page Version ID: 680214585}
+}
+
+@misc{fern_color_2013,
+	year = {2013},
+	title = {Color {Detection} \& {Object} {Tracking}},
+	url = {\url{http://opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html}},
+	note = {Accessed 6 October 2015},
+	author = {Fern, Shermal and {o}},
+}
+
+@incollection{bay_surf:_2006,
+	title = {Surf: {Speeded} up robust features},
+	shorttitle = {Surf},
+	url = {\url{http://link.springer.com/chapter/10.1007/11744023_32}},
+	note = {Accessed 14 October 2015},
+	booktitle = {Computer vision–{ECCV} 2006},
+	publisher = {Springer},
+	author = {Bay, Herbert and Tuytelaars, Tinne and Van Gool, Luc},
+	year = {2006},
+	pages = {404--417}
+}
+
+@misc{lefler_choosing_2004,
+	title = {Choosing the {Right} {Ergonomic} {Office} {Chair}},
+	url = {\url{http://www.spine-health.com/wellness/ergonomics/office-chair-choosing-right-ergonomic-office-chair}},
+	note = {Accessed 25 October 2015},
+	journal = {Spine-health},
+	author = {Lefler, Rodney K.},
+	month = jul,
+	year = {2004}
+}
+
+@inproceedings{davison_real-time_2003,
+	title = {Real-time simultaneous localisation and mapping with a single camera},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1238654}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Computer {Vision}, 2003. {Proceedings}. {Ninth} {IEEE} {International} {Conference} on},
+	publisher = {IEEE},
+	author = {Davison, Andrew J.},
+	year = {2003},
+	pages = {1403--1410}
+}
+
+@inproceedings{szegedy_deep_2013,
+	title = {Deep neural networks for object detection},
+	url = {\url{http://papers.nips.cc/paper/5207-deep}},
+	note = {Accessed 6 October 2015},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems}},
+	author = {Szegedy, Christian and Toshev, Alexander and Erhan, Dumitru},
+	year = {2013},
+	pages = {2553--2561}
+}
+
+@article{khoshelham_accuracy_2012,
+	title = {Accuracy and {Resolution} of {Kinect} {Depth} {Data} for {Indoor} {Mapping} {Applications}},
+	volume = {12},
+	issn = {1424-8220},
+	url = {\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304120/}},
+	doi = {10.3390/s120201437},
+	number = {2},
+	note = {Accessed 24 October 2015},
+	journal = {Sensors (Basel, Switzerland)},
+	author = {Khoshelham, Kourosh and Elberink, Sander Oude},
+	month = feb,
+	year = {2012},
+	pmid = {22438718},
+	pmcid = {PMC3304120},
+	pages = {1437--1454}
+}
+
+@article{vosselman_3d_2001,
+	title = {3D building model reconstruction from point clouds and ground plans},
+	volume = {34},
+	url = {\url{http://www.isprs.org/proceedings/xxxiv/3-w4/pdf/vosselman.pdf}},
+	number = {3/W4},
+	note = {Accessed 26 October 2015},
+	journal = {International Archives of Photogrammetry Remote Sensing and Spatial Information Sciences},
+	author = {Vosselman, George and Dijkman, Sander and {others}},
+	year = {2001},
+	pages = {37--44}
+}
+
+@book{fleet_computer_2014,
+	title = {Computer {Vision} -- {ECCV} 2014: 13th {European} {Conference}, {Zurich}, {Switzerland}, {September} 6-12, 2014, {Proceedings}},
+	isbn = {978-3-319-10593-2},
+	shorttitle = {Computer {Vision} -- {ECCV} 2014},
+	language = {en},
+	publisher = {Springer},
+	author = {Fleet, David and Pajdla, Tomas and Schiele, Bernt and Tuytelaars, Tinne},
+	month = aug,
+	year = {2014}}
+}
+
+@misc{engineering_explained_ackerman_2012,
+	title = {Ackerman {Steering} - {Explained}},
+	url = {\url{https://www.youtube.com/watch?v=oYMMdjbmQXc}},
+	note = {Accessed 12 October 2015},
+	author = {{Engineering Explained}},
+	month = apr,
+	year = {2012},
+	keywords = {ackerman, common, engineering, explained, how, it, point, principle, steering, works}
+}
+
+@article{westoby_structure--motion_2012,
+	title = {‘{Structure}-from-{Motion}’ photogrammetry: {A} low-cost, effective tool for geoscience applications},
+	volume = {179},
+	issn = {0169-555X},
+	shorttitle = {‘{Structure}-from-{Motion}’ photogrammetry},
+	url = {\url{http://www.sciencedirect.com/science/article/pii/S0169555X12004217}},
+	doi = {10.1016/j.geomorph.2012.08.021},
+	note = {Accessed 19 October 2015},
+	journal = {Geomorphology},
+	author = {Westoby, M. J. and Brasington, J. and Glasser, N. F. and Hambrey, M. J. and Reynolds, J. M.},
+	month = dec,
+	year = {2012},
+	pages = {300--314}
+}
+
+@inproceedings{lowe_object_1999,
+	title = {Object recognition from local scale-invariant features},
+	volume = {2},
+	doi = {10.1109/ICCV.1999.790410},
+	booktitle = {The {Proceedings} of the {Seventh} {IEEE} {International} {Conference} on {Computer} {Vision}, 1999},
+	author = {Lowe, D.G.},
+	year = {1999},
+	pages = {1150--1157 vol.2},
+}
+
+@misc{budnick_29_2014,
+	title = {29 inch {Desk} {Height} {Revisited}},
+	url = {\url{https://ergoweb.com/29-inch-desk-height-revisited/}},
+	note = {Accessed 8 October 2015},
+	journal = {Ergoweb},
+	author = {Budnick, Peter},
+	month = mar,
+	year = {2014},
+}
+
+@article{benjamin_sequential_2010,
+	title = {Sequential {Bundle} {Adjustment} {Using} {Kalman} {Filtering} and {Optimal} {Smoothing}},
+	volume = {70},
+	url = {\url{http://www.ingentaconnect.com/content/nsps/salis/2010/00000070/00000003/art00007}},
+	number = {3},
+	note = {Accessed 15 October 2015},
+	journal = {Surveying and Land Information Science},
+	author = {Benjamin, A. and Mohamed, A. and Wilkinson, B.},
+	year = {2010},
+	pages = {161--169}
+}
+
+@incollection{harris_geometry_1992,
+	title = {Geometry from visual motion},
+	booktitle = {Active {Vision}},
+	publisher = {MIT Press},
+	author = {Harris, C},
+	editor = {Blake, A},
+	year = {1992},
+	pages = {263--284}
+}
+
+@inproceedings{datta_content-based_2005,
+	title = {Content-based image retrieval: approaches and trends of the new age},
+	shorttitle = {Content-based image retrieval},
+	url = {\url{http://dl.acm.org/citation.cfm?id=1101866}},
+	note = {Accessed 9 October 2015},
+	booktitle = {Proceedings of the 7th {ACM} {SIGMM} international workshop on {Multimedia} information retrieval},
+	publisher = {ACM},
+	author = {Datta, Ritendra and Li, Jia and Wang, James Z.},
+	year = {2005},
+	pages = {253--262}
+}
+
+@article{mur-artal_orb-slam:_2015,
+	title = {{ORB}-{SLAM}: a {Versatile} and {Accurate} {Monocular} {SLAM} {System}},
+	volume = {31},
+	issn = {1552-3098, 1941-0468},
+	shorttitle = {{ORB}-{SLAM}},
+	url = {\url{http://arxiv.org/abs/1502.00956}},
+	doi = {10.1109/TRO.2015.2463671},
+	number = {5},
+	note = {Accessed 15 October 2015},
+	journal = {IEEE Transactions on Robotics},
+	author = {Mur-Artal, Raul and Montiel, J. M. M. and Tardos, Juan D.},
+	month = oct,
+	year = {2015},
+	note = {arXiv: 1502.00956},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Robotics},
+	pages = {1147--1163},
+	annote = {Comment: 17 pages. 13 figures. IEEE Transactions on Robotics, 2015. Project webpage (videos, code): http://webdiis.unizar.es/{\textasciitilde}raulmur/orbslam/}
+}
+
+@article{sithole_experimental_2004,
+	title = {Experimental comparison of filter algorithms for bare-{Earth} extraction from airborne laser scanning point clouds},
+	volume = {59},
+	url = {\url{http://www.sciencedirect.com/science/article/pii/S0924271604000140}},
+	number = {1},
+	note = {Accessed 24 October 2015},
+	journal = {ISPRS journal of photogrammetry and remote sensing},
+	author = {Sithole, George and Vosselman, George},
+	year = {2004},
+	pages = {85--101}
+}
+
+@inproceedings{lepetit_fully_2003,
+	title = {Fully automated and stable registration for augmented reality applications},
+	url = {\url{http://dl.acm.org/citation.cfm?id=946792}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Proceedings of the 2nd {IEEE}/{ACM} {International} {Symposium} on {Mixed} and {Augmented} {Reality}},
+	publisher = {IEEE Computer Society},
+	author = {Lepetit, Vincent and Vacchetti, Luca and Thalmann, Daniel and Fua, Pascal},
+	year = {2003},
+	pages = {93}
+}
+
+@inproceedings{viola_rapid_2001,
+	title = {Rapid object detection using a boosted cascade of simple features},
+	volume = {1},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=990517}},
+	note = {Accessed 6 October 2015},
+	booktitle = {Computer {Vision} and {Pattern} {Recognition}, 2001. {CVPR} 2001. {Proceedings} of the 2001 {IEEE} {Computer} {Society} {Conference} on},
+	publisher = {IEEE},
+	author = {Viola, Paul and Jones, Michael},
+	year = {2001},
+	pages = {I--511}
+}
+
+@article{pillai_monocular_2015,
+	title = {Monocular {SLAM} {Supported} {Object} {Recognition}},
+	url = {\url{http://arxiv.org/abs/1506.01732}},
+	note = {Accessed 15 October 2015},
+	journal = {arXiv preprint arXiv:1506.01732},
+	author = {Pillai, Sudeep and Leonard, John},
+	year = {2015}
+}
+
+@article{lew_content-based_2006,
+	title = {Content-based multimedia information retrieval: {State} of the art and challenges},
+	volume = {2},
+	shorttitle = {Content-based multimedia information retrieval},
+	url = {\url{http://dl.acm.org/citation.cfm?id=1126005}},
+	number = {1},
+	note = {Accessed 5 October 2015},
+	journal = {ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM)},
+	author = {Lew, Michael S. and Sebe, Nicu and Djeraba, Chabane and Jain, Ramesh},
+	year = {2006},
+	pages = {1--19}
+}
+
+@article{tsai_versatile_1987,
+	title = {A versatile camera calibration technique for high-accuracy 3D machine vision metrology using off-the-shelf {TV} cameras and lenses},
+	volume = {3},
+	issn = {0882-4967},
+	doi = {10.1109/JRA.1987.1087109},
+	number = {4},
+	journal = {IEEE Journal of Robotics and Automation},
+	author = {Tsai, R.Y.},
+	month = aug,
+	year = {1987},
+	keywords = {Application software, Calibration, Cameras, Lenses, Machine vision, Measurement, Metrology, Robotic assembly, Robot kinematics, Robot vision systems, TV},
+	pages = {323--344}
+}
+
+@article{bosche_automated_2008,
+	title = {Automated retrieval of 3D {CAD} model objects in construction range images},
+	volume = {17},
+	issn = {0926-5805},
+	url = {\url{http://www.sciencedirect.com/science/article/pii/S0926580507001148}},
+	doi = {10.1016/j.autcon.2007.09.001},
+	number = {4},
+	note = {Accessed 29 September 2015},
+	journal = {Automation in Construction},
+	author = {Bosche, F. and Haas, C. T.},
+	month = may,
+	year = {2008},
+	pages = {499--512},
+}
+
+@article{nutzi_fusion_2011,
+	title = {Fusion of {IMU} and vision for absolute scale estimation in monocular {SLAM}},
+	volume = {61},
+	url = {\url{http://link.springer.com/article/10.1007/s10846-010-9490-z}},
+	number = {1-4},
+	note = {Accessed 11 October 2015},
+	journal = {Journal of intelligent \& robotic systems},
+	author = {Nützi, Gabriel and Weiss, Stephan and Scaramuzza, Davide and Siegwart, Roland},
+	year = {2011},
+	pages = {287--299}
+}
+
+@article{chen_visual_2003,
+	title = {On {Visual} {Similarity} {Based} 3D {Model} {Retrieval}},
+	volume = {22},
+	issn = {1467-8659},
+	url = {\url{http://onlinelibrary.wiley.com/doi/10.1111/1467-8659.00669/abstract}},
+	doi = {10.1111/1467-8659.00669},
+	language = {en},
+	number = {3},
+	note = {Accessed 5 October 2015},
+	journal = {Computer Graphics Forum},
+	author = {Chen, Ding-Yun and Tian, Xiao-Pei and Shen, Yu-Te and Ouhyoung, Ming},
+	month = sep,
+	year = {2003},
+	pages = {223--232}
+}
+
+@misc{ye_smartphone_2015,
+	title = {Smartphone {Futurology}: {The} science behind your next phone's processor and memory},
+	shorttitle = {Smartphone {Futurology}},
+	url = {\url{http://www.androidcentral.com/smartphone-futurology-3-chips}},
+	note = {Accessed 16 October 2015},
+	journal = {Android Central},
+	author = {Ye, Shen},
+	month = jan,
+	year = {2015}
+}
+
+@misc{nozick_matrices_2015,
+	address = {Université Paris-Est Marne-la-Vallée},
+	title = {Matrices de projection en vision par ordinateur},
+	url = {\url{http://igm.univ-mlv.fr/~vnozick/teaching/slides/ensg/04%20matrices_projection_vision.pdf}},
+	note = {Accessed 10 October 2015},
+	author = {Nozick, Vincent},
+	month = mar,
+	year = {2015}
+}
+
+@article{pei_using_2012,
+	title = {Using {LS}-{SVM} {Based} {Motion} {Recognition} for {Smartphone} {Indoor} {Wireless} {Positioning}},
+	volume = {12},
+	copyright = {http://creativecommons.org/licenses/by/3.0/},
+	url = {\url{http://www.mdpi.com/1424-8220/12/5/6155}},
+	doi = {10.3390/s120506155},
+	language = {en},
+	number = {5},
+	note = {Accessed 16 October 2015},
+	journal = {Sensors},
+	author = {Pei, Ling and Liu, Jingbin and Guinness, Robert and Chen, Yuwei and Kuusniemi, Heidi and Chen, Ruizhi},
+	month = may,
+	year = {2012},
+	keywords = {indoor navigation, LS-SVM, motion recognition, positioning, smartphone, wireless},
+	pages = {6155--6175}
+}
+
+@inproceedings{whitaker_object_1995,
+	title = {Object calibration for augmented reality},
+	volume = {14},
+	url = {\url{http://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.1995.cgf143_0015.x/abstract}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Computer {Graphics} {Forum}},
+	publisher = {Wiley Online Library},
+	author = {Whitaker, Ross T. and Crampton, Chris and Breen, David E. and Tuceryan, Mihran and Rose, Eric},
+	year = {1995},
+	pages = {15--27}
+}
+
+@misc{bormann_innovative_2014,
+	title = {Innovative image processing for service robots},
+	url = {\url{http://www.nanowerk.com/news2/robotics/newsid=34797.php}},
+	note = {Accessed 14 October 2015},
+	author = {Bormann, Richard and Hampp, Joshua},
+	month = mar,
+	year = {2014}
+}
+
+@inproceedings{koppula_semantic_2011,
+	title = {Semantic labeling of 3d point clouds for indoor scenes},
+	url = {\url{http://papers.nips.cc/paper/4226-semantic-labeling-of-3d-point-clouds-for-indoor-scenes}},
+	note = {Accessed 26 October 2015},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems}},
+	author = {Koppula, Hema S. and Anand, Abhishek and Joachims, Thorsten and Saxena, Ashutosh},
+	year = {2011},
+	pages = {244--252}
+}
+
+@misc{alexwild_googles_2011,
+	title = {Google's reverse image search: smart, sort of},
+	shorttitle = {Google's reverse image search},
+	url = {\url{http://www.myrmecos.net/2011/06/23/googles-reverse-image-search-smart-sort-of/}},
+	note = {Accessed 14 October 2015},
+	author = {{alexwild}},
+	month = jun,
+	year = {2011}
+}
+
+@misc{griggs_typical_2001,
+	title = {Typical {Furniture} {Measurements}},
+	note = {Accessed 22 October 2015},
+	journal = {LoebInfo},
+	author = {Griggs, J. Micheal},
+	year = {2001}
+}
+
+@incollection{molinos_perception_2014,
+	series = {Advances in {Intelligent} {Systems} and {Computing}},
+	title = {Perception and {Navigation} in {Unknown} {Environments}: {The} {DARPA} {Robotics} {Challenge}},
+	copyright = {©2014 Springer International Publishing Switzerland},
+	isbn = {978-3-319-03652-6 978-3-319-03653-3},
+	shorttitle = {Perception and {Navigation} in {Unknown} {Environments}},
+	url = {\url{http://link.springer.com/chapter/10.1007/978-3-319-03653-3_24}},
+	language = {en},
+	number = {253},
+	note = {Accessed 15 October 2015},
+	booktitle = {{ROBOT}2013: {First} {Iberian} {Robotics} {Conference}},
+	publisher = {Springer International Publishing},
+	author = {Molinos, Eduardo J. and Llamazares, Ángel and Hernández, Noelia and Arroyo, Roberto and Cela, Andrés and Yebes, José Javier and Ocaña, Manuel and Bergasa, Luis Miguel},
+	editor = {Armada, Manuel A. and Sanfeliu, Alberto and Ferre, Manuel},
+	year = {2014},
+	note = {DOI: 10.1007/978-3-319-03653-3\_24},
+	pages = {321--329}
+}
+
+@phdthesis{morvan_y_yanninck_acquisition_2009,
+	title = {Acquisition, compression and rendering of depth and texture for multi-view video},
+	copyright = {Copyright (c) Morvan, Y Yanninck},
+	url = {\url{http://repository.tue.nl/641964}},
+	language = {null},
+	note = {Accessed 10 October 2015},
+	school = {Technische Universiteit Eindhoven},
+	author = {{Morvan, Y Yanninck} and {With, de PHN Peter} and {Farin, DS Dirk} and {Technische Universiteit Eindhoven}},
+	year = {2009}
+}
+
+@book{hartley_multiple_2003,
+	title = {Multiple view geometry in computer vision},
+	url = {\url{https://books.google.co.za/books?hl=en&lr=&id=si3R3Pfa98QC&oi=fnd&pg=PR11&ots=aRs-ot6e7J&sig=CBKQW3MWtLRTtzv5r5nqblXJtac}},
+	note = {Accessed 11 October 2015},
+	publisher = {Cambridge university press},
+	author = {Hartley, Richard and Zisserman, Andrew},
+	year = {2003}
+}
+
+@incollection{fitzgibbon_automatic_1998,
+	title = {Automatic camera recovery for closed or open image sequences},
+	url = {\url{http://link.springer.com/content/pdf/10.1007/BFb0055675.pdf}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Computer {Vision}—{ECCV}'98},
+	publisher = {Springer},
+	author = {Fitzgibbon, Andrew W. and Zisserman, Andrew},
+	year = {1998},
+	pages = {311--326}
+}
+
+@misc{klingner_university_2014,
+	title = {University of {Texas}, {Computer} {Science} 378 - {Computer} {Vision}},
+	url = {\url{https://github.com/ut-cs378-vision-2014fall/projects}},
+	abstract = {Project 2: Stereo},
+	note = {Accessed 10 October 2015},
+	journal = {GitHub},
+	author = {Klingner, Bryan},
+	month = oct,
+	year = {2014}
+}
+
+@inproceedings{beardsley_active_1995,
+	title = {Active visual navigation using non-metric structure},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=466806}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Computer {Vision}, 1995. {Proceedings}., {Fifth} {International} {Conference} on},
+	publisher = {IEEE},
+	author = {Beardsley, Paul and Reid, Ian D. and Zisserman, Andrew and Murray, David W. and {others}},
+	year = {1995},
+	pages = {58--64}
+}
+
+@inproceedings{yeh_searching_2004,
+	title = {Searching the web with mobile images for location recognition},
+	volume = {2},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1315147}},
+	note = {Accessed 14 October 2015},
+	booktitle = {Computer {Vision} and {Pattern} {Recognition}, 2004. {CVPR} 2004. {Proceedings} of the 2004 {IEEE} {Computer} {Society} {Conference} on},
+	publisher = {IEEE},
+	author = {Yeh, Tom and Tollmar, Konrad and Darrell, Trevor},
+	year = {2004},
+	pages = {II--76}
+}
+
+@incollection{engel_lsd-slam:_2014,
+	title = {{LSD}-{SLAM}: {Large}-scale direct monocular {SLAM}},
+	shorttitle = {{LSD}-{SLAM}},
+	url = {\url{http://link.springer.com/chapter/10.1007/978-3-319-10605-2_54}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Computer {Vision}–{ECCV} 2014},
+	publisher = {Springer},
+	author = {Engel, Jakob and Schöps, Thomas and Cremers, Daniel},
+	year = {2014},
+	pages = {834--849}
+}
+
+@misc{weiss_visual_2014,
+	address = {Greater Columbus Convention Center in Columbus, Ohio},
+	title = {Visual {SLAM} {Tutorial} {\textbar} at {CVPR} 2014},
+	url = {\url{http://frc.ri.cmu.edu/~kaess/vslam_cvpr14/}},
+	note = {Accessed 15 October 2015},
+	author = {Weiss, Stephan and Newcombe, Richard and Beall, Chris},
+	month = jun,
+	year = {2014}
+}
+
+@book{ayache_artificial_1991,
+	title = {Artificial {Vision} for {Mobile} {Robots}: {Stereo} {Vision} and {Multisensory} {Perception}},
+	isbn = {978-0-262-01124-2},
+	shorttitle = {Artificial {Vision} for {Mobile} {Robots}},
+	language = {en},
+	publisher = {MIT Press},
+	author = {Ayache, Nicholas},
+	year = {1991}
+}
+
+@misc{_through_2013,
+	title = {Through the {Wormhole} {S}04 {E}07 "{Are} {Robots} the {Future} of {Human} {Evolution}?" - {Dailymotion} video},
+	shorttitle = {Through the {Wormhole} {S}04 {E}07 "{Are} {Robots} the {Future} of {Human} {Evolution}?},
+	url = {\url{http://www.dailymotion.com/video/x1cgwav_through-the-wormhole-s04-e07-are-robots-the-future-of-human-evolution_tv}},
+	year = {2013},
+	note = {Accessed 28 October 2015},
+	journal = {Dailymotion}
+}
+
+@article{vosselman_recognising_2004,
+	title = {Recognising structure in laser scanner point clouds},
+	volume = {46},
+	url = {\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.222.5399&rep=rep1&type=pdf}},
+	number = {8},
+	note = {Accessed 26 September 2015},
+	journal = {International archives of photogrammetry, remote sensing and spatial information sciences},
+	author = {Vosselman, George and Gorte, Ben GH and Sithole, George and Rabbani, Tahir},
+	year = {2004},
+	pages = {33--38}
+}
+
+@inproceedings{scaramuzza_absolute_2009,
+	title = {Absolute scale in structure from motion from a single vehicle mounted camera by exploiting nonholonomic constraints},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5459294}},
+	note = {Accessed 10 October 2015},
+	booktitle = {Computer {Vision}, 2009 {IEEE} 12th {International} {Conference} on},
+	publisher = {IEEE},
+	author = {Scaramuzza, Davide and Fraundorfer, Friedrich and Pollefeys, Marc and Siegwart, Roland},
+	year = {2009},
+	pages = {1413--1419}
+}
+
+@misc{opencv_devzone_opencv_2011,
+	type = {Project},
+	title = {{OpenCV} {Meeting} notes for 2011 year},
+	shorttitle = {Google {Image} {Result} for http},
+	url = {\url{http://code.opencv.org/projects/opencv/wiki/2011}},
+	note = {Accessed 14 October 2015},
+	author = {OpenCV DevZone},
+	month = jan,
+	year = {2011}
+}
+
+@article{vedula_three-dimensional_2005,
+	title = {Three-dimensional scene flow},
+	volume = {27},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1388274}},
+	number = {3},
+	note = {Accessed 9 October 2015},
+	journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+	author = {Vedula, Srinivas and Rander, Peter and Collins, Robert and Kanade, Takeo},
+	year = {2005},
+	pages = {475--480}
+}
+
+@inproceedings{strasdat_scale_2010,
+	title = {Scale {Drift}-{Aware} {Large} {Scale} {Monocular} {SLAM}.},
+	url = {\url{http://webdiis.unizar.es/~josemari/strasdat_etal_rss2010.pdf}},
+	note = {Accessed 15 October 2015},
+	author = {Strasdat, Hauke and Montiel, J. M. M. and Davison, Andrew J.},
+	month = jun,
+	year = {2010}
+}
+
+@article{xiao_robust_2008,
+	title = {Robust {Recognition} of {Checkerboard} {Pattern} for {Deformable} {Surface} {Matching} in {Multiple} {Views}},
+	url = {\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.371.7527&rep=rep1&type=pdf#page=285}},
+	note = {Accessed 14 October 2015},
+	journal = {HIGH PERFORMANCE COMPUTING \& SIMULATION (HPCS 2008)},
+	author = {Xiao, Weibin Sun Xubo Yang Shuangjiu and Hu, Wencong},
+	year = {2008},
+	pages = {265}
+}
+
+@misc{_google_2015,
+	title = {Google {Images}},
+	copyright = {Creative Commons Attribution-ShareAlike License},
+	url = {\url{https://en.wikipedia.org/w/index.php?title=Google_Images&oldid=683542389}},
+	note = {Accessed 14 October 2015},
+	journal = {Wikipedia, the free encyclopedia},
+	month = sep,
+	year = {2015},
+	note = {Page Version ID: 683542389}
+}
+
+@article{morvan_real_????,
+	title = {Real time object tracking with a low-cost smart camera},
+	url = {\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.60.4200&rep=rep1&type=pdf}},
+	note = {Accessed 10 October 2015},
+	author = {Morvan, Yannick and Broers, Harry and Kleihorst, Richard P. and Raedts, Peter and Abbo, Anteneh}
+}
+
+@inproceedings{klein_parallel_2007,
+	title = {Parallel tracking and mapping for small {AR} workspaces},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4538852}},
+	note = {Accessed 15 October 2015},
+	booktitle = {Mixed and {Augmented} {Reality}, 2007. {ISMAR} 2007. 6th {IEEE} and {ACM} {International} {Symposium} on},
+	publisher = {IEEE},
+	author = {Klein, Georg and Murray, David},
+	year = {2007},
+	pages = {225--234}
+}
+
+@article{azuma_survey_1997,
+	title = {A survey of augmented reality},
+	volume = {6},
+	url = {\url{http://www.mitpressjournals.org/userimages/ContentEditor/1332945956500/PRES_6-4_Azuma_web.pdf}},
+	number = {4},
+	note = {Accessed 26 September 2015},
+	journal = {Presence},
+	author = {Azuma, Ronald T. and {others}},
+	year = {1997},
+	pages = {355--385}
+}
+
+@inproceedings{hoppe_photogrammetric_2012,
+	title = {Photogrammetric camera network design for micro aerial vehicles},
+	volume = {8},
+	url = {\url{http://www.researchgate.net/profile/Horst_Bischof/publication/235332439_Photogrammetric_Camera_Network_Design_for_Micro_Aerial_Vehicles/links/0deec52d94b51d53fd000000.pdf}},
+	note = {Accessed 21 September 2015},
+	booktitle = {Computer vision winter workshop ({CVWW})},
+	author = {Hoppe, Christof and Wendel, Andreas and Zollmann, Stefanie and Pirker, Katrin and Irschara, Arnold and Bischof, Horst and Kluckner, Stefan},
+	year = {2012},
+	pages = {1-3}
+}
+
+@article{azuma_recent_2001,
+	title = {Recent advances in augmented reality},
+	volume = {21},
+	issn = {0272-1716},
+	doi = {10.1109/38.963459},
+	number = {6},
+	journal = {IEEE Computer Graphics and Applications},
+	author = {Azuma, R. and Baillot, Y. and Behringer, R. and Feiner, S. and Julier, S. and MacIntyre, Blair},
+	month = nov,
+	year = {2001},
+	pages = {34--47}
+}
+
+@misc{mccormick_opencv_????,
+	title = {{OpenCV} {SIFT} {Tutorial}},
+	url = {\url{https://chrisjmccormick.wordpress.com/2013/01/24/opencv-sift-tutorial/}},
+	note = {Accessed 6 October 2015},
+	journal = {Chris McCormick},
+	author = {McCormick, Chris}
+}
+
+@inproceedings{fremont_turntable-based_2004,
+	title = {Turntable-based 3D object reconstruction},
+	volume = {2},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1460775}},
+	note = {Accessed 13 October 2015},
+	booktitle = {Cybernetics and {Intelligent} {Systems}, 2004 {IEEE} {Conference} on},
+	publisher = {IEEE},
+	author = {Fremont, Vincent and Chellali, Ryad},
+	year = {2004},
+	pages = {1277--1282}
+}
+
+@inproceedings{golovinskiy_shape-based_2009,
+	title = {Shape-based recognition of 3D point clouds in urban environments},
+	url = {\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5459471}},
+	note = {Accessed 26 September 2015},
+	booktitle = {Computer {Vision}, 2009 {IEEE} 12th {International} {Conference} on},
+	publisher = {IEEE},
+	author = {Golovinskiy, Aleksey and Kim, Vladimir G. and Funkhouser, Thomas},
+	year = {2009},
+	pages = {2154--2161}
+}
+
+@misc{knill_core_2008,
+	title = {Core {Literature} 300R: {Mathematics} of 3d {Image} {Synthesis}},
+	url = {\url{http://www.math.harvard.edu/~knill/sfm/literature/}},
+	abstract = {Required reading for course 300R in the Department of Mathematics at Hardvard University},
+	note = {Accessed 10 October 2015},
+	journal = {Core Literature for 300R},
+	author = {Knill, Oliver},
+	month = nov,
+	year = {2008}
+}
+
+@misc{steder_point_2010,
+	address = {University of Freiburg},
+	title = {The {Point} {Cloud} {Library} {PCL}},
+	url = {\url{http://ais.informatik.uni-freiburg.de/teaching/ws10/robotics2/pdfs/rob2-12-ros-pcl.pdf}},
+	note = {Accessed 26 September 2015},
+	author = {Steder, Bastian},
+	month = nov,
+	year = {2010}
+}
+
+@misc{fergus_lecture_2012,
+	address = {New York University},
+	type = {Slideshow},
+	title = {Lecture 6: {Multi}-view {Stereo} \& {Structure} from {Motion}},
+	url = {\url{http://cs.nyu.edu/~fergus/teaching/vision_2012/6_Multiview_SfM.pdf}},
+	language = {English},
+	note = {Accessed 19 September 2015},
+	author = {Fergus, Rob},
+	collaborator = {Lazebnik, Lana and Snavelly, Noah and Seitz, Steve and Szeliski, Rick and Hebert, Martial and Pollefeys, Mark},
+	month = sep,
+	year = {2012}
+}
+
+@misc{_ackermann_2014,
+	title = {Ackermann steering geometry},
+	copyright = {Creative Commons Attribution-ShareAlike License},
+	url = {\url{https://en.wikipedia.org/w/index.php?title=Ackermann_steering_geometry&oldid=638146131}},
+	language = {en},
+	note = {Accessed 12 October 2015},
+	journal = {Wikipedia, the free encyclopedia},
+	month = dec,
+	year = {2014},
+	note = {Page Version ID: 638146131}
+}
+
+@misc{calin_how_????,
+	title = {How to {Detect} and {Track} {Object} {With} {OpenCV}},
+	url = {\url{http://www.intorobotics.com/how-to-detect-and-track-object-with-opencv/}},
+	note = {Accessed 6 October 2015},
+	journal = {Into Robotics},
+	author = {Calin, Dragos}
+}
+
+@inproceedings{nuchter_semantic_2003,
+	title = {Semantic {Scene} {Analysis} of {Scanned} 3D {Indoor} {Environments}.},
+	url = {\url{http://www.researchgate.net/profile/Hartmut_Surmann/publication/220839320_Semantic_Scene_Analysis_of_Scanned_3D_Indoor_Environments/links/0fcfd50bb99e23c271000000.pdf}},
+	note = {Accessed 26 September 2015},
+	booktitle = {{VMV}},
+	author = {Nüchter, Andreas and Surmann, Hartmut and Lingemann, Kai and Hertzberg, Joachim},
+	year = {2003},
+	pages = {215--221}
+}
+
+@misc{blodow_celebrating_2011,
+	title = {Celebrating 50 {Years} of {Robotics}, {PCL}::{Segmentation}},
+	url = {\url{http://www.pointclouds.org/assets/iros2011/segmentation.pdf}},
+	abstract = {Celebrating 50 Years of Robotics},
+	author = {Blodow, Nico},
+	month = sep,
+	year = {2011}
+}
+
+@book{_mathematical_2007,
+	title = {Mathematical {Models} and {Photogrammetric} {Exploitation} of {Image} {Sensing}},
+	isbn = {978-0-549-30267-4},
+	language = {en},
+	publisher = {ProQuest},
+	year = {2007}
+}
+
+@misc{_data_????,
+	title = {Data acquisition and integration 5., {Photogrammetry}{\textbar}{Digital} {Textbook} {Library}},
+	url = {\url{http://www.tankonyvtar.hu/en/tartalom/tamop425/0027_DAI5/ch01s02.html}},
+	note = {Accessed 19 September 2015}
+}
+
+@article{rabbani_segmentation_2006,
+	title = {Segmentation of point clouds using smoothness constraint},
+	volume = {36},
+	url = {\url{http://www.isprs.org/proceedings/XXXVI/part5/paper/RABB_639.pdf}},
+	number = {5},
+	note = {Accessed 26 September 2015},
+	journal = {International Archives of Photogrammetry, Remote Sensing and Spatial Information Sciences},
+	author = {Rabbani, Tahir and van den Heuvel, Frank and Vosselmann, G.},
+	year = {2006},
+	pages = {248--253}
+}

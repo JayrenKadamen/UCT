@@ -1,0 +1,208 @@
+% Chapter 3
+
+\chapter{Method} % Write in your own chapter title
+\label{Chapter3}
+\lhead{Chapter 3. \emph{Method}} % Write in your own chapter title to set the page header
+
+This chapter will discuss the steps followed to demonstrate a proof-of-concept test for the development of a fully automatic way of estimating a real-world scale for unstructured point clouds. The upcoming sections discuss in detail the concept, method and execution.
+\vspace{-2.5mm}
+\section{Concept\label{concept}}
+\vspace{-2.5mm}
+Indoor scenes such as office spaces, university lecture rooms, and household environments feature objects which are commonly used such as chairs, desks or tables. These objects have dimensions which can be estimated without the need for physical measurement. Table \ref{furnitureDim} below and figure \ref{furniture} on the following page illustrates the average dimensions for commonly found objects:
+
+\begin{table}[h!]
+	\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{5cm}|}
+	\hline
+	\multicolumn{3}{|c|}{Typical Measurements for \href{http://www.fas.harvard.edu/~loebinfo/loebinfo/Proportions/furniture.html}{Furniture} and \href{http://www.fas.harvard.edu/~loebinfo/loebinfo/Proportions/stairsdoors.html}{Doors}} \\
+	\hline
+	Item & Dimension & Label \\
+	\hline
+	Chair &45-\href{http://www.spine-health.com/wellness/ergonomics/office-chair-choosing-right-ergonomic-office-chair}{53cm} & Seat Height \\
+	 & 40cm & Seat Length\\
+	 & 81-107cm & Backrest Height\\
+	\hhline{|=|=|=|}
+	Desk & 74cm & Tabletop Height \\
+	& 122-152cm & Tabletop Length\\
+	& 74cm & Tabletop Width\\
+	\hhline{|=|=|=|}
+	Door & 200cm & Height \\
+	& 96cm & Doorknob Height\\
+	& 61-91cm & Width \\
+	\hline
+\end{tabular}
+\caption{Table showing the average dimensions of furniture and doors, \citep{lefler_choosing_2004} and \citep{griggs_typical_2001}}
+\label{furnitureDim}
+\end{table}
+
+\clearpage
+
+
+
+\vspace*{1cm}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[trim=0.0cm 0.0cm 0.0cm 4.0cm,width=1.15\linewidth,center]{./Figures/"FurnitureSchematic"}
+	\caption[Schematic diagram of furniture]{Schematic diagram of commonly found furniture (chairs, desks or tables, and doors) based on values from \citet{lefler_choosing_2004} and \citet{griggs_typical_2001}}
+	\label{furniture}
+\end{figure}
+
+Using objects with dimensions that can be estimated provides a fully automatic way of determining scale for a scene by utilising object recognition. This means that no physical measurements need to take place within the scene or for the known object. This also allows for the scale of a scene that has already been captured to be determined. 
+
+The method that was derived to test the above hypothesis took the form of a proof-of-concept test. This meant that a fully-fledged CBIR system leveraging object recognition did not need to be developed. This fortunately meant that a database of known objects need not be developed either. 
+
+The following sections detail the steps outlined to test the above hypothesis from data capture to PCD processing and statistical testing. Indoor spaces on UCT campus were selected as test candidates. The types of rooms included a modern classroom within the newly constructed Snape Building, (Snape 3C), a meeting room (Environmental \& Geographical Science (EGS) Seminar Room) and the Geomatics Postgraduate Computer Lab. A point cloud representation of each room can be found in figures \ref{EGS}, \ref{Snape3C}, and \ref{DeepSpace} on the pages that follow.
+
+Each room contained different types of chairs with varying heights from older office chairs with wheeled bases (EGS Seminar Room) to modern ergonomic chairs (Snape 3C). Desks and tables also varied between rooms as the Geomatics Postgraduate Computer Lab featured cubicle desks with a large office table whilst the others contained a variety of tables.
+\newpage
+
+\begin{sidewaysfigure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,center]{./images/"EGS"}
+	\caption{A point cloud representation of the EGS Seminar Room.\label{EGS}}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,center]{./images/"DeepSpace"}
+	\caption{A point cloud representation of the Geomatics Postgrad Lab.\label{DeepSpace}}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,center]{./images/"Snape3C"}
+	\caption{A point cloud representation of the newly constructred Snape 3C classroom.\label{Snape3C}}
+\end{sidewaysfigure}
+\clearpage
+
+\subsection{Scanning and Pre-Processing Procedure}
+The Geomatics Postgraduate Computing Lab was scanned with the scanner placed directly atop a table. For Snape 3C and the EGS Seminar Room the scanner was mounted on a tripod to provide a less occluded view. Multiple set-ups per room were not performed even though this would have provided a more complete point cloud as this was to include occlusions in order to test the robustness of identifying objects solely on their relative height. 
+
+The PCD was cleaned to remove outlying points. These were points that had strayed outside of the indoor space. Lastly to reduce computation time the point clouds were thinned to a $1cm$ resolution. This limits the precision to which the dimensions of an object recognised within the room to $1cm$ as well. However this is not a cause for concern at the proof-of-concept stage. 
+
+\section{Processing PCD}
+
+The program structure is outlined in figure \ref{outline} below and detailed in the upcoming subsections.
+\vspace{1.5cm}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.15\textwidth, center]{./Figures/"Program Workflow"}
+	\caption{Program Workflow Diagram \label{outline}}
+\end{figure}
+\clearpage
+\subsection{Point Normals}
+The region growing algorithm from PCL was used to perform the segmentation. This algorithm makes use of the normal to each point in the supplied PCD and as such the first step is to calculate the point normals for the input PCD. This problem is solved using a built-in class within PCL called Normal Estimation. The implementation of this can be seen in figure \ref{normalestimation} below.
+\newline
+\begin{figure}[h!]
+\begin{lstlisting}
+	// Calling normal_estimator function
+	pcl::NormalEstimation<PointType, pcl::Normal> normal_estimator;
+	// Setting search method 
+	normal_estimator.setSearchMethod(tree);
+	// Providing input PCD
+	normal_estimator.setInputCloud(cloud);
+	// Setting the neighbour selection algorithm as KNN
+	normal_estimator.setKSearch(m_knn);
+	// Store the result in the variable `normalcloud'
+	normal_estimator.compute(*normalcloud);
+\end{lstlisting}
+\caption{Implementation of the built-in NormalEstimation class within PCL \label{normalestimation}}\end{figure}
+
+The point normal for each point is approximated by calculating the normal of a plane that lies tangent to the surface and passes through the seed point. This reduces the problem to a Principal Components Analysis (PCA) calculation and an analysis of the resulting covariance matrix, $C$. In equation \ref{eqn:PCA} below $N_{i}$ is the seed point, $k$ is the number of nearest neighbours closest to the seed point, $N_0$ is the centre of the nearest neighbours (in 3D coordinate space), $\lambda_j$ and $\vec{v}_j$ represent the $j-$th eigenvalue of the covariance matrix and the $j-$th value of the eigenvector respectively.
+
+\begin{equation}\label{eqn:PCA}
+C = \frac{1}{k} \sum_{i=1}^{k}.(N_i-N_0).(N_i-N_0)^T, C.\vec{v}_j = \lambda_j.\vec{v}_j, j \in\{0,1,2\}
+\end{equation}
+
+An illustration of the resulting point normals can be seen on the following page in figure \ref{pntnormals}. For visualisation purposes only every $400^{th}$ normal vector is displayed in order for the scene to still be discernible.
+Once the point normals are obtained these are written to a PCD file and later used in the region growing segmentation. 
+
+\clearpage
+
+\begin{sidewaysfigure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,center]{./images/"Original2"}
+	\includegraphics[width=\textwidth,center]{./images/"Normals"}
+	\caption[Illustration of point normals]{\textbf{Scene:} Snape 3C. \textbf{Top:} Original point cloud. \textbf{Bottom:} Point cloud illustrating every $400^{th}$ point normal.\label{pntnormals}}
+\end{sidewaysfigure}
+
+\clearpage
+
+\subsection{Region Growing Segmentation \label{regiongrowing}}
+
+The segmentation process using the region growing algorithm from PCL is detailed below:
+\begin{itemize} 
+\item Each point in the PCD is sorted by its curvature value as the region growing starts from the point that has the lowest curvature (indicating flatness). This initial point is called the seed point.
+\item The number of neighbouring points are selected based using the KNN algorithm and a value specified beforehand.
+\item The selected neighbouring points are then added to seeds.
+\item The angle between the selected point normal within the seeds and the initial seed point normal is determined. This angle represents the smoothness constraint and is used to determine whether the points belong to the same cluster. If the value is below the threshold then it is added to the current region.
+\item The deviation of the point normals for the current region is calculated. This represents the curvature value and if the newly added point results in the region exceeding the curvature threshold then the region stops growing and a new seed point for a new segment is selected.
+\item This procedure is repeated until there are no new points to process.
+\end{itemize}
+
+Figure \ref{initialSeg} on the following page illustrates the segmented point cloud. Each segment has a different colour whilst the red points are those that do not belong to any segment. This allows a visual assessment of the segmentation in order to visually portray each segment, which has been detected, by different colours.
+
+Once the segments have been extracted from the PCD they are stored in Random-Access Memory (RAM) instead of being written to file immediately. Additional processing on each segment must still occur and writing the segments to disk at this stage would have slowed down the computational time considerably. The next step is to discern whether the segment is horizontal or vertical which is accomplished by performing a PCA for each segment. 
+
+\clearpage
+
+\begin{sidewaysfigure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth,center]{./images/"Original2"}
+	\includegraphics[width=0.9\textwidth,center]{./images/"InitialSeg"}
+	\caption[Illustration of the resultant segmentation for Snape 3C]{\textbf{Scene:} Snape 3C. \textbf{Top:} Original point cloud. \textbf{ Bottom:} Point cloud illustrating each segment with a different colour. Red points do not belong to any segment.\label{initialSeg}}
+\end{sidewaysfigure}
+\clearpage
+
+\subsection{PCA}
+A PCA is used to indicate the strongest pattern in a dataset. The first step is to calculate the eigenvector for a given dataset which will depict the direction in which the largest variance occurs. In this case the datasets are the segments which consist of a collection of 3D $(X,Y,Z)$, coordinate points and as such the resultant eigenvectors represent the three orthogonal axes in 3D coordinate space that the points vary the most. Each eigenvector has an eigenvalue which describes how much variance is in that direction. The largest eigenvalue represents the eigenvector or direction of greatest variance for the entire dataset, this is referred to as the principal component axis (figure \ref{e1}). The smallest eigenvalue illustrates the axis of least variance and in the case of planar segments this is the normal to the plane (figure \ref{e2}). 
+\newline
+
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}{.45\linewidth}
+		\includegraphics[width=1.00\linewidth,center]{./Images/"RecCloudSmall"}
+		\caption[Illustration of the principal component axis]{The red axis represents the principal component (largest variation of points)}
+		\label{e1}
+	\end{minipage}
+	\hspace{.05\linewidth}
+	\begin{minipage}{0.45\linewidth}
+		\includegraphics[width=1.175\linewidth,center]{./Images/"RecCloud2Small"}
+		\caption[Illustration of the normal to the plane]{The black axis represents the normal to the plane (least variation of points)}
+		\label{e2}
+	\end{minipage}
+\end{figure}
+\vspace{-3mm}
+
+The vertical is represented by the vector $\{0,0,1\}$ and the angle between it and the normal determines the orientation of the plane in 3D space. This angle was then calculated using equation \ref{eq:angle} below where $e_0$ represents the minimum eigenvalue.
+\vspace{-3mm}
+\begin{equation}\label{eq:angle}
+\theta = \arccos(e_0)
+\vspace{-8mm}
+\end{equation}
+
+If the angle is close to $0^\circ$ then it indicates a horizontal plane and if it is close to $90^\circ$ it represents a vertical plane. These segments are then written to PCD files in separate folders based on whether they are horizontal or vertical. Information about each segment is written to a comma-space delimited (CSV) file for further analysis, the content of which is detailed in the next section (\ref{LevObjRecog})
+
+\section{Leveraging Object Recognition \label{LevObjRecog}}
+\vspace{-2mm}
+The core concept of object recognition is to detect an object within a scene. Modern algorithms use feature detection and multiple descriptors but for the purposes of simplicity this was reduced to recognising objects based on their relative height from the floor (which was identified by the segment that has the lowest average height value). Once the segment has been identified as horizontal or vertical further data concerning it is written to a CSV file. This data includes heights (such as minimum, maximum and average height) and the number of points for the respective segment. The average height of the horizontal segment is used to classify whether an object is a table or chair. The height of a desk was set to lie between $72 \ \& \ 80cm$ to allow for variation in desk types whilst the heights of chairs was set to lie between  $45 \ \& \ 53cm$ to allow for chairs with adjustable heights. Figure \ref{classification} below illustrates the structure of the object recognition and determining the segment orientation.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.89125\linewidth]{./Figures/"Classification"}
+	\caption{Workflow diagram of determining segment orientation and classification}
+	\label{classification}
+\end{figure}
+\clearpage
+\section{Histogram of Heights and F-Test}
+Weighted histograms for the horizontal segment heights were used to illustrate the distribution of heights within a scene and to observe where spikes occur which indicated a cluster of objects. In some rooms such as the Snape 3C classroom the desks were placed very close together which resulted in strips of desks belonging to one large segment. This under-segmentation was preferred as it erred on the side of identifying an object rather than missing it. As a result each segment within the histogram of heights was weighted using the number of points in said segment. 
+
+An F-test was performed to determine whether the variance of the height of an object type in each room were equal. The hypothesis test is defined below in equation \ref{eq:hyp} where $s^2_1$ and $s^2_2$ represent the sample variances. A large deviation from $1$ of these variances suggest that they do not belong to the same population. 
+
+\begin{equation}\label{eq:hyp}
+\begin{split}
+H_0: \ \sigma^2_1 = \sigma^2_2 \\
+H_a: \ \sigma^2_1 \neq \sigma^2_2 \\
+Test \ Statistic: \ \frac{s^2_1}{s^2_2}
+\end{split}
+\end{equation}

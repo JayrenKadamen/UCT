@@ -1,0 +1,233 @@
+% Chapter 2
+
+\chapter{Literature Review} % Write in your own chapter title
+\label{Chapter2}
+\lhead{Chapter 2. \emph{Literature Review}} % Write in your own chapter title to set the page header
+
+This chapter serves to provide a background to how terrestrial PCD is obtained, why scale is arbitrary and how a real-world scale is derived for each acquisition method. Point-cloud processing has seen research predominantly within the field of computer-vision and as such the tools detailed in the following sections all originate from branches of this field. This can be attributed to the widespread use of cameras in robotic-based computer-vision problems due to their relative affordability and low power consumption in comparison to active sensors such as Light Detection And Ranging (LiDAR) systems. Current solutions that have successfully determined a real-world scale for a model or scene will be discussed ranging from manual to fully automatic methods.
+
+The penetration of smart-phone devices will be discussed as they have the ability to capture scenes using images and video. Their growing and widespread use \citep{goldstein_report:_2014} has the potential to result in these devices becoming major contributors for remotely-sensed scenes using a monocular camera set-up. 
+
+Cutting-edge technologies which have had to solve the problem of obtaining a real-world scale for PCD such as AR systems will be covered by this chapter before ending with a discussion concerning specific papers which have contributed significant research to the proposed method detailed herein. 
+
+\section{Sources of PCD\label{SourcePCD}}
+PCD can be obtained from a variety of sources from active sensors such as laser scanners and structured light systems to cameras (passive sensors). Laser scanners however are range measuring devices and as such contain a real-world scale (hence the need for calibration of these devices). Structured light systems such as the Kinect (\href{https://dev.windows.com/en-us/kinect}{Windows\textsuperscript{\textregistered}}) and David Laserscanner (\href{http://www.david-3d.com/en/}{D$\Lambda$VID\textsuperscript{\textregistered}}) have a known base-length between the camera and projector which is used to propagate scale throughout the generated PCD. Monocular camera set-ups however are unable to generate PCD with a non-arbitrary scale without additional data. 
+
+The sections that follow detail methods of obtaining PCD for monocular set-ups for terrestrial scenes (compared to aerial photogrammetric methods). 
+
+\subsection{Structure from Motion}
+The practice of determining the motion of the imaging platform (such as a camera) from the change in scene content (from photographs or video frames) is known as Structure from Motion (SfM) \citep{scaramuzza_absolute_2009}. Given multiple images of a finite number of fixed 3D points the task is to estimate the projection matrices and recover the 3D coordinate of $X_j$ in figure \ref{sfm} on the following page from the corresponding image points $x_{1_{j}}$, $x_{2_{j}}$, $x_{3_{j}}$. The problem however is that each pair of images (\textbf{$P_1$} and \textbf{$P_2$} in figure \ref{sfm} for instance) have their own unique scale to allow for the vectors from the image points through the camera perspective centres to intersect at a common object point, ($X_j$ in figure \ref{sfm}). Open Source Computer Vision (OpenCV) offers the Perspective n-Point (PnP) algorithm along with Random Sample Consensus (RANSAC) to solve for the position of subsequent cameras ($P_3$) using the object points that have already been identified \citep{mccann_3d_2015}. Scale is not determined due to any physical phenomenon but rather as a result of what is mathematically required in order to reconstruct a scene through triangulation of multiple points.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.85\linewidth]{./images/"SFM"}
+	\caption[SfM with 3 images]{$3$ images $P_1$ to $P_3$ all contain the real-world 3D point $X_j$ which has corresponding image coordinates $x_{1_j}, x_{2_j}, x_{3_j}$. These image points are used to align the images such that $X_j$ is reprojected to a common position in 3D space with an arbitrary scale \citep{fergus_lecture_2012}.
+		\label{sfm}}
+\end{figure}
+
+Due to this it is well documented within SfM that obtaining a real-world scale can only be achieved when one knows the baseline distance between subsequent frames of the camera motion (from \textbf{$P_1$} to  \textbf{$P_2$} and \textbf{$P_3$} in figure \ref{sfm}) or an element in the scene must have a known real-world dimension \citep{fergus_lecture_2012}. 
+
+Obtaining the baseline distance can be achieved by making use of a combination of Internal Measurement Unit (IMU) and Global Positioning System (GPS) systems such as the one proposed by \citet{nutzi_fusion_2011}. The use of these additional technologies is not always readily available especially with images and video that have already been captured. 
+
+\subsection{Multi-View Stereo \label{multi-view}}
+The primary goal of multi-view stereo is to generate a dense 3D model from multiple views of an object or scene \citep{seitz_comparison_2006}. `Scene flow' is an expansion of this which includes scenes that have been captured using imaging platforms that move in a non-rigid manner such as video \citep{vedula_three-dimensional_2005}. 
+
+Points from the same object within a scene captured from multiple images need to be matched and anchored to the same physical point. This is a difficult task as multiple views of the same scene often result in objects being subject to occlusion between views, perceived changes in shape and alteration of appearance. The procedure to recreate the 3D scene from 2D images measures whether the ``3D model is consistent with the input images'' \citep{mccann_3d_2015}. Parameters such as colour, edges and texture can be used to measure consistency within the collection of images that offer multiple views of a scene or object. Two approaches are used to create the final 3D model the first requires many views as it builds the model up from points which can be seen throughout a large percentages of the input images. The second requires high resolution imagery in order to capture significant texture information and good geometry as it starts with a bounding box and inconsistent points are eliminated from the model.
+
+Transforming images to fit features within the scene can lead to transformations errors from rotations and scaling. The Scale Invariant Feature Transform (SIFT) algorithm uses multiple techniques to provide scale, rotation, illumination and small view-point change invariance. Speeded Up Robust Features (SURF) is partially based upon, and can be seen as an evolution of, the SIFT algorithm. It boasts faster computation times and is more robust at mitigating transformation errors \citep{bay_surf:_2006}. Figure \ref{SURF} illustrates SURF matching given two views of a Rubiks cube.
+\newline
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\linewidth]{./images/"matching"}
+	\caption[SURF Feature matching on a Rubiks cube] {\href{http://rwbclasses.groups.et.byu.net/lib/exe/fetch.php?media=campus_challenge:vr_documentation.pdf}{Red lines identify matching points using the SURF algorithm between two images with different vantage points of the same Rubiks cube} \citep{anon._vision_2011}.}
+	\label{SURF}
+\end{figure}
+
+The process of forming the 3D model involves stitching together multiple images in order to recreate the scene based upon features. This is done to create a 3D model that is consistent with the given images rather than based on a physical phenomenon such as accurately re-projecting the bundle of rays that created each image originally. As such this method results in a model with an arbitrary scale.
+
+\section{Obtaining a Real-World Scale for PCD}
+\subsection{Manual Measurements\label{ManualMeasurements}}
+Physically measuring a dimension in the scene and propagating it through the generated 3D model is an established method of providing a real-world scale for PCD. This can be accomplished by measuring an item in the scene or by using targets with known coordinates in a 3D reference frame. An example of these targets can be seen below in figure \ref{BlackWhite}. They are distinctly coloured black and white so that they are visually distinguishable in a scene.
+
+An example of a terrestrial target used in both laser scanning (to tie multiple scans together) and photogrammetry (for the purposes described in this chapter) can be seen below in figures \ref{BlackWhite} \& \ref{FalseColour}.
+\newline
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}{.45\linewidth}
+		\includegraphics[width=0.85\linewidth]{./images/"blackwhitetilttarget_straighton"}
+		\caption[Monochrome targets used in photogrammetry and laser scanning]{Black and White Targets for Photogrammetry and Laser Scanning are indexed or their coordinates are known and used to tie multiple images or scans together. (\href{http://hds.leica-geosystems.com/en/Targets_19143.htm}{Leica Geosystems HDS Targets})}
+		\label{BlackWhite}
+	\end{minipage}
+	\hspace{.05\linewidth}
+	\begin{minipage}{.45\linewidth}
+		\includegraphics[width=\linewidth]{./images/"Target"}
+		\caption[False colour representation of target]{False colour representation of the same target on the left based on intensity values from a laser scanner. This makes it visually distinct and easier to identify during the post-processing phase where scans are tied together. (\href{http://www.3dreshaper.com/en1/En_alignment.htm}{Registration, Best Fit, Alignment})}
+		\label{FalseColour}
+	\end{minipage}
+\end{figure}
+\newpage
+Coordinates of these targets are ascertained through surveying means such as a traverse. The targets are then tied to a real-world coordinate system and are then identified in the PCD to be used as control points. The distances between them provide a non-arbitrary scale as it defines the relationship between points through real-world distances thus creating a metric space.
+
+Making use of manual measurements introduce an element of human error. This can take the form of insufficient measurements to offer adequate geometry or to distribute error through the scene. With respect to measuring a single dimension in the scene there is a risk that the measurement can be read incorrectly, forgotten to be made or documented value could be lost. Manual measurements require additional effort, equipment and time to perform and for point clouds that have already been captured they often do not offer a solution to obtaining a real-world scale.
+\vspace{-5mm}
+\subsection{Use of Known Objects \label{ObjectDetection}}
+\vspace{-5mm}
+Object detection is used to find instances of real-world objects such as people, cars or bicycles in scenes that originate from video or images. Objects are described using descriptors called features which can take the form of texture, colour and many other attributes. A unique collection of these features create a feature space which describes an object \citep{davidson-pilon_machine_2012}. Objects with known features are stored in a database and algorithms search the scene to find collections of features which match those stored in the database. This can be seen in figure \ref{objectdetec} below where items commonly found in a kitchen are attempted to be identified by a program written with the OpenCV library. 
+\vspace{-1mm}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.593605\linewidth]{./images/"object"}
+	\caption[Object Detection using OpenCV]{Object detection identifies the checkerboard pattern which is used to obtain a scale for the scene as the size of the squares are known. The absolute scale is used to identify other objects where measurements are descriptors \citep{opencv_devzone_opencv_2011}.
+	\label{objectdetec}}
+\end{figure}
+\clearpage
+Object detection attempts to solve the problem of obtaining a non-arbitrary scale for PCD by placing objects which have at least one feature that describes a known dimension within a scene. In the above figure a calibration pattern (checkerboard) serves as this type of known object as each black and white square has a known dimension. Using SfM the distance between subsequent frames of the video feed containing the above scene can be recovered and used to propagate scale throughout the resulting PCD \citep{fleet_computer_2014}. The calibration pattern can also be used to determine the interior parameters of the camera. 
+
+Once an absolute scale has been determined the other objects within the scene such as Campbell's can of soup can be described by its true height. In figure \ref{objectdetec} above bounding boxes with squares at the corners depict an object with a high match against its descriptors in the database whilst other boxes represent partial matches.
+
+\subsubsection*{Example of Using Object Detection to Derive Absolute-Scale}
+
+The paper presented by \citet{rashidi_generating_2014} details a method of obtaining real-world measurements from PCD that has been generated by monocular photography and videogrammetry. The problem presented with the current solutions is that it requires manual measurements (detailed in chapter \ref{ManualMeasurements}) to obtain real-world scale. 
+
+The solution proposed by this paper was to make use of object detection with specific objects for outdoor and indoor scenes. These objects came in the form of an $A4$ piece of paper for indoor scenes and a cube with known dimensions and distinctly coloured sides for outdoor scenes. The $A4$ sheet of paper was chosen as it is a commonly found item in indoor environments thus making it readily available with dimensions already known. The algorithm used is able to extract the corner points of both the cube and the $A4$ sheet in order to match them in subsequent frames. These objects are then used to determine a non-arbitrary scale. The method and results of the indoor scenes will be discussed. 
+
+The $A4$ sheet requires the four corner points to be detected, as a result epipolar geometry was used to identify the corresponding points in the second view based on the assumption that the corner points follow a clockwise order. The four corners were detected by first identifying the page itself (by filtering the Hue Saturation Values (HSV) of the scene). A modified Hough transform, to account for lines appearing curved due to lens distortions, is used to identify the edges of the sheet. The edges are extended until they intersect the neighbouring edge at a point thus providing the four corners of the $A4$ sheet.
+
+To test the performance of the above concept a number of scenes were captured by means of a video taken by an off-the-shelf video camera. Each scene was captured as completely as possible in order to minimise occlusions. In order to determine the discrepancy between true distances and those obtained from the generated point cloud manual measurements were made with a Leica Laser Disto. The average length measurement error for indoor scenes were $0.14cm/m$. The results offer promising accuracies using a medium such as video that suffers from blurring between frames, lower resolution than photography and varying principal distance (due to autofocus).
+%5750
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=(0.5750\linewidth)]{./images/"AbsoluteScaleMonocular"}
+	\caption[Bathroom reconstruction using a monocular set-up]{\textbf{Reconstructed Bathroom from Video:} \textit{(c)} and \textit{(d)} illustrate vantage points of an indoor bathroom scene from frames of a video whilst \textit{(f)} illustrates the resulting reconstructed point cloud from a monocular set-up \citep{rashidi_generating_2014}.
+		\label{monocular}}
+\end{figure}
+\vspace{-2.5mm}
+\newline
+The shortcoming with the method discussed above is that a known object needs to be placed in the scene before it can be captured. If the cube or $A4$ paper is not readily available the absolute-scale for the scene cannot be determined using this method. If the cube experienced physical damage during transportation or the $A4$ paper was not perfectly straight (or taken from an exam pad where the top strip has been trimmed off altering the dimension of it) the consequence would be an incorrect scale for the resulting PCD of the scene.
+
+Using object detection to obtain a real-world scale for PCD can be seen as a semi-automatic method because a prepared object with known dimensions must be placed in the scene beforehand. Even so it can be seen as an improvement over manual measurements in terms of equipment required and sources of error described in chapter \ref{ManualMeasurements}. 
+
+
+\subsection{Content-Based Image Retrieval\label{CBIR}}
+
+The field of computer vision has seen a sharp rise in research within CBIR which attempts to describe scenes or images based on the content in the image rather than relying on metadata alone. The rise in research can be attributed to the incorporation of high quality imaging sensors becoming common-place in smart-phone devices. The latter along with internet services that offer image sharing has led to a rise in the sheer volume of imagery readily available over the internet thus resulting in a growing need for improved methods of querying such a rapidly expanding database \citep{yeh_searching_2004}.  
+
+The ``content'' referred to within images are called features, a collection of which are used to describe an object (which has the same definition as that outlined in chapter \ref{ObjectDetection}). Describing the content of an image is not the primary goal of CBIR systems but rather to generalise the description of content within an image or PCD. This allows the description to be used in a variety of applications from object recognition to reverse image searches where the quality of the result (matching object or image respectively) can be assessed. 
+
+One of the tools of CBIR is object recognition, an extremely important component of computer vision systems. The primary goal of this tool in relation to robotics is to give robots equipped with imaging sensors the ability to recognise unknown objects within a scene. Before the images are re-projected to create a 3D scene the objects within the images can be recognised in order to ascertain further descriptors for it once its 3D counterpart has been generated. This method can draw from a larger image database which is remotely accessed via the internet in order to select the appropriate 3D object stored in a local database. Additional adjacent features from the images can also be used to better locate the object in the 3D scene from that recognised in the images. This method uses a hybrid of server and client based systems as well as 2D and 3D object recognition. 
+
+In figure \ref{objectrecog} objects are recognised based on geometric shape. The descriptors need to be specific enough not to confuse the blue and red toy car in the top centre with the maroon hole-punch (top left) but also general enough to be able to detect any type of hole-punch regardless of colour for example.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=(\linewidth/2)]{./images/"recognition"}
+	\caption[Object recognition under non-uniform lighting conditions and occlusions]{Even under non-uniform lighting conditions and occlusions the object recognition system illustrated above can still identify objects successfully. Each object type has a different colour bounding box, (the shoe has a green box whilst the punch has a dark blue box) \citep{bormann_innovative_2014}.
+		\label{objectrecog}}
+\end{figure}
+
+Once an object has been recognised based on its geometric features it can also be classified by comparing them against all the classes within its database to see which class offers the best fit \citep{lai_rgb-d_2013}. This allows a computer vision system to ascertain which object is in the image rather than where a particular object is in an image as in the case of object detection \citep{penelope_image_2013}. 
+
+The same criteria to obtain a real-world measurement using object detection is present here in object recognition (at least one descriptor of an identified object must be a measurement). The benefit however of using object recognition is that it can identify many possible objects within a scene rather than having to place a known object such as a calibration pattern within it beforehand. This allows the scale of PCD, that has already been acquired, to be determined. %ASK ABOUT NON-UNIFORM SCALE IF ONLY ONE OBJECT IS RECOGNISED.
+
+\section{Discussion\label{LitRevDiscussion}}
+
+\subsection{Augmented Reality\label{ARChap}}
+AR ``is a technology that superimposes a computer-generated image on a user's view of the real world, thus providing a composite view'' \citep{sadiku_signals_2015}. These systems need to be capable of locating objects in a real-world environment and aligning geometric models to them \citep{whitaker_object_1995}. An example of this can be seen in the figures below where an AR system recognises a MathWorks magnet on the desk (figure \ref{Aug1}) and overlays a video on top of it in real-time (figure \ref{Aug2}).
+\vspace{10mm}
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}{.45\linewidth}
+		\includegraphics[width=\linewidth]{./images/"Aug1"}
+		\caption[AR system using object recognition]{AR system using object recognition to identify the MathWorks fridge magnet. 
+		\label{Aug1}}
+	\end{minipage}
+	\hspace{.05\linewidth}
+	\begin{minipage}{.45\linewidth}
+		\includegraphics[width=\linewidth]{./images/"Aug2"}
+		\caption[AR system overlays a video on an object in real-time]{AR system overlays a video onto the recognised object in real-time.
+		\label{Aug2}}
+	\end{minipage}
+	\rule[0.5em]{38em}{0.5pt}
+	\href{http://www.mathworks.com/videos/object-recognition-and-tracking-for-augmented-reality-90546.html}{Object Recognition and Tracking for Augmented Reality}
+\end{figure}
+
+A non-arbitrary scale is required in order to position and align the supplementary computer-generated imagery onto the relevant real-world object. Established methods of achieving a real-world scale make use of object detection in the form of calibration patterns or known objects but these are not always available. Modern methods include the use of object recognition such as the system proposed by \citet{lepetit_fully_2003} where an image of the scene is registered online by matching feature points against a database. In this solution the emphasis was placed on using a server based approach to alleviate the computational burden so that the client can concentrate on delivering the computational performance required to run the AR system.
+\newpage
+To resolve the internal and external orientation parameters object recognition or detection methods can be used. These can also be used to derive a real-world scale if a dimension of the detected or recognised object is known. Calibration drift arises when the camera moves and this accumulates once the object used for calibration is no longer in the field of view. This results in a need to re-calibrate at set intervals, often based on the algorithm used and the level of precision desired. This can be solved by returning to the position where the calibration object is located or by placing these objects along a pre-determined path at intervals where re-calibration is needed to mitigate the effects of drift. Each calibration calculation is processor intensive as it uses a least squares bundle adjustment (\citet{tsai_versatile_1987} for instance or Kalman filtering \citep{mirzaei_kalman_2008}). 
+
+In the field of computer vision a commonly occurring goal is to create a platform that can navigate and explore a scene autonomously. This often results in an imaging platform that is battery powered which limits the processing power available to the client as performance is traded for energy-efficiency. The calibration calculation can be computed on the server and sent back to the client but this relies on having an internet connection that is fast enough for this to be the most efficient solution. 
+
+\subsection{Simultaneous Localization and Mapping}
+
+Simultaneous Localization and Mapping (SLAM) modules are tasked with creating and updating a virtual environment that represents an unknown real-world scene. This has to occur in real-time whilst the scene is explored and the location of this device must be constantly tracked. Modern iterations of SLAM based systems feature multiple sensors each with a strength related to their function; LiDAR offers range measurements whilst cameras contribute colour. Examples of modern autonomous SLAM based systems can be found in the Defense and Research Projects Agency (DARPA) Robotics Challenge which has set the standard in this field \citep{molinos_perception_2014}. Even though solutions to the DARPA Robotics Challenge rarely rely on monocular camera set-ups for real-time mapping the equipment used such as LiDAR is expensive and power-hungry putting them out of reach for small scale robotic applications. Cameras are more accessible from a financial standpoint and have comparatively low power requirements in their passive form yet they need to be calibrated using the methods discussed in chapters \ref{ObjectDetection} and \ref{CBIR} which are subject to the drawbacks detailed in chapter \ref{ARChap}. Visual SLAM (vSLAM) makes use of a monocular camera rather than a variety of sensors to solve the problem of localization and mapping by generating PCD to form a 3D representation of the scene \citep{weiss_visual_2014}.
+
+SfM has matured to the point where post-processing a scene captured by multiple images from a single camera in order to recover the route traversed is procedural rather than problematic \citep{fitzgibbon_automatic_1998}. vSLAM however requires this to be determined in real-time which introduces challenges not faced by post-processed solutions. An example problem is the inability to distribute error evenly through the captured images as they cannot be batch processed simultaneously because new regions of the scene are constantly being incorporated. The real-time constraint forces vSLAM modules to be efficient. If the images are received at a constant rate such as from a camera at $25Hz$ the computations must operate in constant time and as such the processing time per image cannot increase endlessly otherwise the real-time constraint will be breached \citep{davison_real-time_2003}. \citet{mouragnon_real_2006} presented the first real-time example of a bundle adjustment followed by \citet{klein_parallel_2007} which presented Parallel Tracking And Mapping (PTAM) for AR using SLAM.
+
+Initial calibration is performed using object detection with early attempts at combating drift making use of short-lived features akin to those used in post-processing methods \citep{harris_geometry_1992,beardsley_active_1995,ayache_artificial_1991}. \citet{mur-artal_orb-slam:_2015} represents a modern method of solving the problem by using Orientated FAST and Rotated BRIEF (ORB), a computationally efficient and robust local feature detector which draws from the Features from Accelerated Segment Test (FAST) feature point extraction algorithm and Binary Robust Independent Elementary Features (BRIEF). Large Scale Direct Monocular-SLAM (LSD-SLAM) developed by \citet{engel_lsd-slam:_2014} has relative-scale and the beneficial property of being able to distinguish near-field objects from those further afield allowing for better selection of object windows during a constantly changing view. The work by \citet{pillai_monocular_2015} incorporates both ORB and LSD-SLAM for object-recognition and uses the work of \citet{strasdat_scale_2010} to combat scale, rotation and translation drift at loop closure. The system presented is able to access the map of its surroundings that it is currently observing whilst it builds new areas and the location of the camera is known at any point in time. This is referred to as a SLAM-aware system compared to a SLAM-oblivious one where objects are detected and recognised as new frames are recorded without being aware of its location in the map that is being built \citep{pillai_monocular_2015}. The benefit of this system is that it does not need to be recalibrated at regular intervals, it relies on returning to the initial position to distribute the error over the traversed path. The drawback is the need to return to the initial position.
+\vspace{10mm}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=1.15\linewidth,center]{./images/"SLAM_ORB_LSD"}
+	\caption[Comparison of SLAM-aware and SLAM-oblivious]{Comparison of the performance of SLAM-aware (left) versus SLAM-oblivious (right)
+		object recognition where ambiguity is present. In the right image the coffee mug is misidenitified as a soda can and has a red bounding-box to highlight this misidentification \citep{pillai_monocular_2015}.
+		\label{SLAM_ORB_LSD}}
+\end{figure}
+
+\subsection{Mobile Devices}
+
+Mobile devices such as smart-phones are becoming increasingly commonplace \citep{goldstein_report:_2014} and powerful in terms of processing power \citep{ye_smartphone_2015}. They are also packed with MicroElectroMechanical Systems (MEMS) which feature a variety of technologies from GPS to mobile telecommunications. Smart-phones are currently being used for outdoor navigational purposes relying on a mixture of GPS and an internet connection for location. Once the device moves indoors however GPS is unable to provide a reliable location due to lack of reception. Mobile telecommunications can also be rendered inoperative once inside large structures or underground and WiFi may not be freely available. The IMU is able to track the path travelled but it is subject to drift which is cumulative thus rendering this technology imprecise in practice without GPS to rectify it \citep{david_sachs_sensor_2010}. 
+\newpage
+Using a smart-phone for indoor mapping and localisation therefore presents challenges not encountered for outdoor navigation and localisation. \citet{pei_using_2012} presented a solution to the location problem by recording built-in accelerometers and magnetometers within smart-phones in various states of motion (motionless, whilst the user is standing or walking etc.). Least Squares-Support Vector Machines (LS-SVM) was then used to ascertain which motion was being performed in order to assist the wireless positioning algorithm that made use of WiFi signal strength to calculate the relative change from the rest position. The availability of WiFi in commercial areas has risen in recent years \citep{wakefield_one_2014} making this solution relevant but it is still a power-hungry resource, a limiting factor for smart-phone devices which run off batteries. 
+
+\citet{mostofi_indoor_2014} presented a solution to the mapping and localisation problem with their SLAM based system which uses a monocular camera and the built-in IMU found on smart-phones. The system delays key-point initialisation to first correct the drift from the IMU and SLAM systems using the Extended Kalman Filter technique. The SLAM module uses the SURF algorithm assisted by RANSAC to recognise features and ascertain location and relative motion based on features already recorded. All of the calculations occur on the device rather than rely on wireless technologies to be available to communicate with remote processing services. The camera is not calibrated beforehand so it has an arbitrary and constantly changing scale. This can be resolved by using object-detection if a client-based solution is desired or object-recognition if a larger database of objects is required which may result in a hybrid solution of a server-based database and client-based processing.
+
+\subsection{Indoor Scene Analysis for Point Clouds \label{indoor_scene_analysis}}
+Objects can be described not only by local features but also by relationships it has within the scene itself. With scene analysis the arrangement of objects in relation to one another can be used as a descriptor (i.e. all computer screens are on desks in a classroom). This opens up a variety of descriptors based on the relationships between other objects such as relative distances, sizes and orientation. The first step is segmenting the collection of points that populate a cloud into objects based on their fundamental features.
+
+Segmentation identifies collections of points and groups them into segments for further processing. For example a point cloud of a classroom will have four walls, a ceiling, a floor, desks and chairs. In basic terms these objects are comprised of horizontal and vertical planes of varying sizes. A good segmentation model will be able to separate the smallest object (a single chair) from the largest object (floor or ceiling). This however depends on ones geometric understanding of the scene and for an algorithm to be robust it must incorporate a level of generalisation.  There are a number of models which Point Cloud Library (PCL) offers for this but for the purposes of this thesis only region-growing segmentation will be discussed.
+
+\subsubsection*{Segmentation of Point Clouds using Smoothness Constraint \label{Smoothness}}
+An integral part of automatic point cloud processing is segmentation. The paper by \citet{rabbani_segmentation_2006} aimed to offer an alternative to curvature-based segmentation as it often led to over-segmentation resulting in the need for manual editing. Instead a smoothness constraint was used to segment the point cloud along with surface normals which allowed the algorithm to be robust. 
+
+The segmentation is broken up into two major steps, normal estimation and region growing. The normal to each point is estimated by making use of plane fitting where the size of the neighbourhood of points is specified by KNN or FDN. The residuals from plane fitting can be attributed to noise or a possible descriptor of high curvature as proposed by \citet{rabbani_segmentation_2006}.
+
+The region growing algorithm used takes the point-normals along with the residuals and groups collections of points which have smooth-surfaces. The grouping is subject to the constraint that the points must be locally connected (making use of k-Nearest Neighbours (KNN) or Fixed Distance Neighbours (FDN)) and form a smooth surface (low variation of point normals).
+
+The residual threshold, $r_{th}$, dictates the degree of under-segmentation or over-segmentation. Figure \ref{Smoothness_Results} on the following page illustrates the effect of adjusting the residual threshold of the resulting segmentation for one of four industrial scenes that were used. By changing the threshold between the normal of a selected seed point and its neighbours, $\theta_{th}$ the smoothness constraint can be controlled as well. 
+\clearpage
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=1\linewidth]{./images/"rabbani_fig_4_Cropped"}
+	\caption[Effect of changing the residual threshold in segmentation]{In the top right the object is comprised of large segments whilst the bottom right has individual strips for the cooling fins of the machine. This is achieved by adjusting the residual threshold to allow more segments \citep{rabbani_segmentation_2006}
+		\label{Smoothness_Results}}
+\end{figure}
+
+The end result was a robust algorithm that could group smooth areas whilst giving the user a choice between under-segmentation or over-segmentation. 
+
+\textbf{Relevance:} Solving the problem of controlling under-segmentation and over-segmentation allows one of the major initial steps of point cloud processing to be fully autonomous - i.e. no need for manual editing to correct poor segmentation. If this can be accomplished then an in-depth understanding of the mathematical underpinnings of the segmentation need not be known to the end-user.
+
+\subsection{Object Recognition for Indoor Point Clouds}
+The field of object recognition within computer vision has experienced growing interest due to advances in energy-efficient processors on mobile platforms and lightweight and affordable cameras. This allows for high-quality camera's to be attached to mobile robotic platforms which requires powerful yet energy-efficient processors. The ultimate goal is to imbue the complex human vision system upon a robot. On the path to attaining this computer vision systems are currently able to recognise objects in a scene based on the unique collection of features that describe it.
+
+In chapter \ref{indoor_scene_analysis} the focus was on analysing the scene as a whole and whether adequate segmentation had taken place. The following paper by \cite{rabbani_segmentation_2006} concentrates on recognising items within a scene for the purpose of attributing meaningful labels to them (for the purposes of robotic interaction).
+
+\subsubsection*{Deriving Object Based Maps from PCD \label{objectbasedmaps}}
+\citet{rusu_towards_2008} put forth a scenario where an autonomous robot is 
+tasked with helping a human perform chores within a kitchen in an assisted living situation. The issues raised by this scenario are not just mapping the environment for the purposes of navigation but to recognise objects such as cupboards and appliances. The robot will have to know what items are stored within these objects or whether the object performs a specific function (such as a washing machine) so that it knows where to look in order to complete a specified task such as washing clothes.
+
+The point cloud is converted into an environment object model where the robot is able to tell which objects are obstacles for navigation purposes and which areas of the scene can be fit to a model in order to recognise objects that are required to perform tasks.
+
+Once the point cloud is acquired only geometric information concerning the scene is available which is adequate for position and navigation purposes but not for interacting with objects within the environment. For this to take place semantic information must be extracted which is done by the functional mapping module which makes use of object recognition to identify objects based on geometric descriptors. 
+
+The aforementioned module uses the same region-growing approach developed by \citet{rabbani_segmentation_2006} and discussed in chapter \ref{Smoothness} to segment the point cloud into recognisable planar surfaces. Once the point cloud has been segmented a model fitting algorithm uses a collection of cuboids, circles, and lines to fit cupboards, knobs, and doors respectively. An illustration of how the cuboids are fit can be found in figure \ref{kitchen_model_fitting} on the following page. 
+\clearpage
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=1.225\linewidth,center]{./images/"kitchen_model_fitting"}
+	\caption[Process of segmenting a scene and fitting a model to it]{\textbf{From left:} Initial segmentation identifies planes (far left to centre left). Boundary points of each segmented region (centre right) are used to create best fitted lines to each boundary. Cuboids (far right) are created by projecting the 2D quad formed by the boundary points and best fitted lines back onto the wall. \citep{rusu_towards_2008}
+		\label{kitchen_model_fitting}}
+\end{figure}
+
+The result was a map creation process that could take a point cloud which only offered an occluded view of an environment and apply semantic labels to recognised objects. This was accomplished so that a semantic map could be built allowing the robot to intelligently interact with the environment. 
+
+\textbf{Relevance:} The realisation that man-made indoor spaces consist of a collection of horizontal and vertical planes allows for intelligent segmentation. The use of shapes along with planes (cuboids and horizontal surfaces respectively) allow for contrasting of similar objects along with accurate attribution of their semantic labels (such as drawers and cupboards both have planar surfaces but can be told apart based on relative cuboid size and handle shape). 

@@ -1,0 +1,353 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Anon.}{2011}{anon._vision_2011}
+Anon.  \harvardyearleft 2011\harvardyearright , Vision {Recognition}, Technical
+  report, Brigham Young University, Department of Electrical and Computer
+  Engineering, Provo, Utah, United States.
+\newblock Accesssed October 14th, 2015.
+\newline\harvardurl{\url{http://rwbclasses.groups.et.byu.net/lib/exe/fetch.php?media=campus_challenge:vr_documentation.pdf}}
+
+\harvarditem{Ayache}{1991}{ayache_artificial_1991}
+Ayache, N.  \harvardyearleft 1991\harvardyearright , {\em Artificial {Vision}
+  for {Mobile} {Robots}: {Stereo} {Vision} and {Multisensory} {Perception}},
+  MIT Press.
+
+\harvarditem[Bay et~al.]{Bay, Tuytelaars \harvardand\
+  Van~Gool}{2006}{bay_surf:_2006}
+Bay, H., Tuytelaars, T. \harvardand\ Van~Gool, L.  \harvardyearleft
+  2006\harvardyearright , Surf: {Speeded} up robust features, {\em in}
+  `Computer vision–{ECCV} 2006', Springer, pp.~404--417.
+\newblock Accessed 14 October 2015.
+\newline\harvardurl{\url{http://link.springer.com/chapter/10.1007/11744023_32}}
+
+\harvarditem[Beardsley et~al.]{Beardsley, Reid, Zisserman, Murray \harvardand\
+  {others}}{1995}{beardsley_active_1995}
+Beardsley, P., Reid, I.~D., Zisserman, A., Murray, D.~W. \harvardand\ {others}
+  \harvardyearleft 1995\harvardyearright , Active visual navigation using
+  non-metric structure, {\em in} `Computer {Vision}, 1995. {Proceedings}.,
+  {Fifth} {International} {Conference} on', IEEE, pp.~58--64.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=466806}}
+
+\harvarditem{Bormann \harvardand\ Hampp}{2014}{bormann_innovative_2014}
+Bormann, R. \harvardand\ Hampp, J.  \harvardyearleft 2014\harvardyearright ,
+  `Innovative image processing for service robots'.
+\newblock Accessed 14 October 2015.
+\newline\harvardurl{\url{http://www.nanowerk.com/news2/robotics/newsid=34797.php}}
+
+\harvarditem[Caruso et~al.]{Caruso, Engel \harvardand\
+  Cremers}{2015}{caruso_large-scale_2015}
+Caruso, D., Engel, J. \harvardand\ Cremers, D.  \harvardyearleft
+  2015\harvardyearright , Large-{Scale} {Direct} {SLAM} for {Omnidirectional}
+  {Cameras}, {\em in} `International {Conference} on {Intelligent} {Robots} and
+  {Systems} ({IROS})'.
+
+\harvarditem{{David Sachs}}{2010}{david_sachs_sensor_2010}
+{David Sachs}  \harvardyearleft 2010\harvardyearright , `Sensor {Fusion} on
+  {Android} {Devices}: {A} {Revolution} in {Motion} {Processing}'.
+\newblock Accessed 16 October 2015.
+\newline\harvardurl{\url{https://www.youtube.com/watch?v=C7JQ7Rpwn2k&feature=youtu.be&t=23m21s}}
+
+\harvarditem{Davidson-Pilon}{2012}{davidson-pilon_machine_2012}
+Davidson-Pilon, C.  \harvardyearleft 2012\harvardyearright , `machine learning
+  - {What} is "feature space"? - {Cross} {Validated}'.
+\newblock Accessed 6 October 2015.
+\newline\harvardurl{\url{http://stats.stackexchange.com/questions/46425/what-is-feature-space}}
+
+\harvarditem{Davison}{2003}{davison_real-time_2003}
+Davison, A.~J.  \harvardyearleft 2003\harvardyearright , Real-time simultaneous
+  localisation and mapping with a single camera, {\em in} `Computer {Vision},
+  2003. {Proceedings}. {Ninth} {IEEE} {International} {Conference} on', IEEE,
+  pp.~1403--1410.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1238654}}
+
+\harvarditem{DevZone}{2011}{opencv_devzone_opencv_2011}
+DevZone, O.  \harvardyearleft 2011\harvardyearright , `{OpenCV} {Meeting} notes
+  for 2011 year'.
+\newblock Accessed 14 October 2015.
+\newline\harvardurl{\url{http://code.opencv.org/projects/opencv/wiki/2011}}
+
+\harvarditem[Engel et~al.]{Engel, Schöps \harvardand\
+  Cremers}{2014}{engel_lsd-slam:_2014}
+Engel, J., Schöps, T. \harvardand\ Cremers, D.  \harvardyearleft
+  2014\harvardyearright , {LSD}-{SLAM}: {Large}-scale direct monocular {SLAM},
+  {\em in} `Computer {Vision}–{ECCV} 2014', Springer, pp.~834--849.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://link.springer.com/chapter/10.1007/978-3-319-10605-2_54}}
+
+\harvarditem{Fergus}{2012}{fergus_lecture_2012}
+Fergus, R.  \harvardyearleft 2012\harvardyearright , `Lecture 6: {Multi}-view
+  {Stereo} \& {Structure} from {Motion}'.
+\newblock Accessed 19 September 2015.
+\newline\harvardurl{\url{http://cs.nyu.edu/~fergus/teaching/vision_2012/6_Multiview_SfM.pdf}}
+
+\harvarditem{Fitzgibbon \harvardand\
+  Zisserman}{1998}{fitzgibbon_automatic_1998}
+Fitzgibbon, A.~W. \harvardand\ Zisserman, A.  \harvardyearleft
+  1998\harvardyearright , Automatic camera recovery for closed or open image
+  sequences, {\em in} `Computer {Vision}—{ECCV}'98', Springer, pp.~311--326.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://link.springer.com/content/pdf/10.1007/BFb0055675.pdf}}
+
+\harvarditem[Fleet et~al.]{Fleet, Pajdla, Schiele \harvardand\
+  Tuytelaars}{2014}{fleet_computer_2014}
+Fleet, D., Pajdla, T., Schiele, B. \harvardand\ Tuytelaars, T.
+  \harvardyearleft 2014\harvardyearright , {\em Computer {Vision} -- {ECCV}
+  2014: 13th {European} {Conference}, {Zurich}, {Switzerland}, {September}
+  6-12, 2014, {Proceedings}}, Springer.
+
+\harvarditem{Goldstein}{2014}{goldstein_report:_2014}
+Goldstein, P.  \harvardyearleft 2014\harvardyearright , `Report: {Global}
+  smartphone penetration to jump 25\% in 2014, led by {Asia}-{Pacific}'.
+\newblock Accessed 16 October 2015.
+\newline\harvardurl{\url{http://www.fiercewireless.com/story/report-global-smartphone-penetration-jump-25-2014-led-asia-pacific/2014-06-11}}
+
+\harvarditem{Griggs}{2001}{griggs_typical_2001}
+Griggs, J.~M.  \harvardyearleft 2001\harvardyearright , `Typical {Furniture}
+  {Measurements}'.
+\newblock Accessed 22 October 2015.
+\newline\harvardurl{\url{http://www.fas.harvard.edu/~loebinfo/loebinfo/Proportions/furniture.html}}
+
+\harvarditem{Harris}{1992}{harris_geometry_1992}
+Harris, C.  \harvardyearleft 1992\harvardyearright , Geometry from visual
+  motion, {\em in} A.~Blake, ed., `Active {Vision}', MIT Press, pp.~263--284.
+
+\harvarditem{Insider}{2015}{insider_drones_2015}
+Insider, B.  \harvardyearleft 2015\harvardyearright , {The} {Drones} {Report}:
+  {Market} forecasts, regulatory barriers, top vendors, and leading commercial
+  applications, Technical report.
+\newblock Accessed 26 October 2015.
+\newline\harvardurl{\url{http://www.businessinsider.com/uav-or-commercial-drone-market-forecast-2015-2}}
+
+\harvarditem{Klein \harvardand\ Murray}{2007}{klein_parallel_2007}
+Klein, G. \harvardand\ Murray, D.  \harvardyearleft 2007\harvardyearright ,
+  Parallel tracking and mapping for small {AR} workspaces, {\em in} `Mixed and
+  {Augmented} {Reality}, 2007. {ISMAR} 2007. 6th {IEEE} and {ACM}
+  {International} {Symposium} on', IEEE, pp.~225--234.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4538852}}
+
+\harvarditem[Lai et~al.]{Lai, Bo, Ren \harvardand\ Fox}{2013}{lai_rgb-d_2013}
+Lai, K., Bo, L., Ren, X. \harvardand\ Fox, D.  \harvardyearleft
+  2013\harvardyearright , {RGB}-{D} object recognition: {Features}, algorithms,
+  and a large scale benchmark, {\em in} `Consumer {Depth} {Cameras} for
+  {Computer} {Vision}', Springer, pp.~167--192.
+\newblock Accessed 14 October 2015.
+\newline\harvardurl{\url{http://link.springer.com/chapter/10.1007/978-1-4471-4640-7_9}}
+
+\harvarditem{Lefler}{2004}{lefler_choosing_2004}
+Lefler, R.~K.  \harvardyearleft 2004\harvardyearright , `Choosing the {Right}
+  {Ergonomic} {Office} {Chair}'.
+\newblock Accessed 25 October 2015.
+\newline\harvardurl{\url{http://www.spine-health.com/wellness/ergonomics/office-chair-choosing-right-ergonomic-office-chair}}
+
+\harvarditem[Lepetit et~al.]{Lepetit, Vacchetti, Thalmann \harvardand\
+  Fua}{2003}{lepetit_fully_2003}
+Lepetit, V., Vacchetti, L., Thalmann, D. \harvardand\ Fua, P.  \harvardyearleft
+  2003\harvardyearright , Fully automated and stable registration for augmented
+  reality applications, {\em in} `Proceedings of the 2nd {IEEE}/{ACM}
+  {International} {Symposium} on {Mixed} and {Augmented} {Reality}', IEEE
+  Computer Society, p.~93.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://dl.acm.org/citation.cfm?id=946792}}
+
+\harvarditem{McCann}{2015}{mccann_3d_2015}
+McCann, S.  \harvardyearleft 2015\harvardyearright , 3d {Reconstruction} from
+  {Multiple} {Images}, Technical report, Stanford University.
+\newblock Accessed 13 October 2015.
+\newline\harvardurl{\url{http://cs.nyu.edu/~fergus/teaching/vision_2012/6_Multiview_SfM.pdf}}
+
+\harvarditem{Mirzaei \harvardand\ Roumeliotis}{2008}{mirzaei_kalman_2008}
+Mirzaei, F. \harvardand\ Roumeliotis, S.  \harvardyearleft
+  2008\harvardyearright , `A {Kalman} {Filter}-{Based} {Algorithm} for
+  {IMU}-{Camera} {Calibration}: {Observability} {Analysis} and {Performance}
+  {Evaluation}', {\em IEEE Transactions on Robotics} {\bf 24}(5),~1143--1156.
+
+\harvarditem[Molinos et~al.]{Molinos, Llamazares, Hernández, Arroyo, Cela,
+  Yebes, Ocaña \harvardand\ Bergasa}{2014}{molinos_perception_2014}
+Molinos, E.~J., Llamazares, n., Hernández, N., Arroyo, R., Cela, A., Yebes,
+  J.~J., Ocaña, M. \harvardand\ Bergasa, L.~M.  \harvardyearleft
+  2014\harvardyearright , Perception and {Navigation} in {Unknown}
+  {Environments}: {The} {DARPA} {Robotics} {Challenge}, {\em in} M.~A. Armada,
+  A.~Sanfeliu \harvardand\ M.~Ferre, eds, `{ROBOT}2013: {First} {Iberian}
+  {Robotics} {Conference}', number 253 {\em in} `Advances in {Intelligent}
+  {Systems} and {Computing}', Springer International Publishing, pp.~321--329.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://link.springer.com/chapter/10.1007/978-3-319-03653-3_24}}
+
+\harvarditem[Mostofi et~al.]{Mostofi, Elhabiby \harvardand\
+  El-Sheimy}{2014}{mostofi_indoor_2014}
+Mostofi, N., Elhabiby, M. \harvardand\ El-Sheimy, N.  \harvardyearleft
+  2014\harvardyearright , Indoor localization and mapping using camera and
+  inertial measurement unit ({IMU}), {\em in} `Position, {Location} and
+  {Navigation} {Symposium} - {PLANS} 2014, 2014 {IEEE}/{ION}', pp.~1329--1335.
+
+\harvarditem[Mouragnon et~al.]{Mouragnon, Lhuillier, Dhome, Dekeyser
+  \harvardand\ Sayd}{2006}{mouragnon_real_2006}
+Mouragnon, E., Lhuillier, M., Dhome, M., Dekeyser, F. \harvardand\ Sayd, P.
+  \harvardyearleft 2006\harvardyearright , Real {Time} {Localization} and 3d
+  {Reconstruction}, {\em in} `2006 {IEEE} {Computer} {Society} {Conference} on
+  {Computer} {Vision} and {Pattern} {Recognition}', Vol.~1, pp.~363--370.
+
+\harvarditem[Mur-Artal et~al.]{Mur-Artal, Montiel \harvardand\
+  Tardos}{2015}{mur-artal_orb-slam:_2015}
+Mur-Artal, R., Montiel, J. M.~M. \harvardand\ Tardos, J.~D.  \harvardyearleft
+  2015\harvardyearright , `{ORB}-{SLAM}: a {Versatile} and {Accurate}
+  {Monocular} {SLAM} {System}', {\em IEEE Transactions on Robotics} {\bf
+  31}(5),~1147--1163.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://arxiv.org/abs/1502.00956}}
+
+\harvarditem[Nützi et~al.]{Nützi, Weiss, Scaramuzza \harvardand\
+  Siegwart}{2011}{nutzi_fusion_2011}
+Nützi, G., Weiss, S., Scaramuzza, D. \harvardand\ Siegwart, R.
+  \harvardyearleft 2011\harvardyearright , `Fusion of {IMU} and vision for
+  absolute scale estimation in monocular {SLAM}', {\em Journal of intelligent
+  \& robotic systems} {\bf 61}(1-4),~287--299.
+\newblock Accessed 11 October 2015.
+\newline\harvardurl{\url{http://link.springer.com/article/10.1007/s10846-010-9490-z}}
+
+\harvarditem[Pei et~al.]{Pei, Liu, Guinness, Chen, Kuusniemi \harvardand\
+  Chen}{2012}{pei_using_2012}
+Pei, L., Liu, J., Guinness, R., Chen, Y., Kuusniemi, H. \harvardand\ Chen, R.
+  \harvardyearleft 2012\harvardyearright , `Using {LS}-{SVM} {Based} {Motion}
+  {Recognition} for {Smartphone} {Indoor} {Wireless} {Positioning}', {\em
+  Sensors} {\bf 12}(5),~6155--6175.
+\newblock Accessed 16 October 2015.
+\newline\harvardurl{\url{http://www.mdpi.com/1424-8220/12/5/6155}}
+
+\harvarditem{Penelope}{2013}{penelope_image_2013}
+Penelope  \harvardyearleft 2013\harvardyearright , `image processing - {Object}
+  detection versus object recognition - {Signal} {Processing} {Stack}
+  {Exchange}'.
+\newblock Accessed 14 October 2015.
+\newline\harvardurl{\url{http://dsp.stackexchange.com/questions/12940/object-detection-versus-object-recognition}}
+
+\harvarditem{Pillai \harvardand\ Leonard}{2015}{pillai_monocular_2015}
+Pillai, S. \harvardand\ Leonard, J.  \harvardyearleft 2015\harvardyearright ,
+  `Monocular {SLAM} {Supported} {Object} {Recognition}', {\em arXiv preprint
+  arXiv:1506.01732} .
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://arxiv.org/abs/1506.01732}}
+
+\harvarditem[Rabbani et~al.]{Rabbani, van~den Heuvel \harvardand\
+  Vosselmann}{2006}{rabbani_segmentation_2006}
+Rabbani, T., van~den Heuvel, F. \harvardand\ Vosselmann, G.  \harvardyearleft
+  2006\harvardyearright , `Segmentation of point clouds using smoothness
+  constraint', {\em International Archives of Photogrammetry, Remote Sensing
+  and Spatial Information Sciences} {\bf 36}(5),~248--253.
+\newblock Accessed 26 September 2015.
+\newline\harvardurl{\url{http://www.isprs.org/proceedings/XXXVI/part5/paper/RABB_639.pdf}}
+
+\harvarditem[Rashidi et~al.]{Rashidi, Brilakis \harvardand\
+  Vela}{2014}{rashidi_generating_2014}
+Rashidi, A., Brilakis, I. \harvardand\ Vela, P.  \harvardyearleft
+  2014\harvardyearright , `Generating {Absolute}-{Scale} {Point} {Cloud} {Data}
+  of {Built} {Infrastructure} {Scenes} {Using} a {Monocular} {Camera}
+  {Setting}', {\em Journal of Computing in Civil Engineering} {\bf
+  0}(0),~04014089.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://dx.doi.org/10.1061/(ASCE)CP.1943-5487.0000414}}
+
+\harvarditem{Richter}{2012}{richter_infographic:_2012}
+Richter, F.  \harvardyearleft 2012\harvardyearright , `Infographic: 4.4
+  {Billion} {Camera} {Phones}...'.
+\newblock Accessed 26 October 2015.
+\newline\harvardurl{\url{http://www.statista.com/chart/653/prevalence-of-selected-features-in-the-global-installed-base-of-mobile-phones/}}
+
+\harvarditem[Rusu et~al.]{Rusu, Marton, Blodow, Dolha \harvardand\
+  Beetz}{2008}{rusu_towards_2008}
+Rusu, R.~B., Marton, Z.~C., Blodow, N., Dolha, M. \harvardand\ Beetz, M.
+  \harvardyearleft 2008\harvardyearright , `Towards 3d {Point} cloud based
+  object maps for household environments', {\em Robotics and Autonomous
+  Systems} {\bf 56}(11),~927--941.
+\newblock Accessed 28 September 2015.
+\newline\harvardurl{\url{http://www.sciencedirect.com/science/article/pii/S0921889008001140}}
+
+\harvarditem{Sadiku \harvardand\ Ali}{2015}{sadiku_signals_2015}
+Sadiku, M. N.~O. \harvardand\ Ali, W.~H.  \harvardyearleft
+  2015\harvardyearright , {\em Signals and {Systems}: {A} {Primer} with
+  {MATLAB}®}, CRC Press.
+
+\harvarditem[Scaramuzza et~al.]{Scaramuzza, Fraundorfer, Pollefeys \harvardand\
+  Siegwart}{2009}{scaramuzza_absolute_2009}
+Scaramuzza, D., Fraundorfer, F., Pollefeys, M. \harvardand\ Siegwart, R.
+  \harvardyearleft 2009\harvardyearright , Absolute scale in structure from
+  motion from a single vehicle mounted camera by exploiting nonholonomic
+  constraints, {\em in} `Computer {Vision}, 2009 {IEEE} 12th {International}
+  {Conference} on', IEEE, pp.~1413--1419.
+\newblock Accessed 10 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5459294}}
+
+\harvarditem[Seitz et~al.]{Seitz, Curless, Diebel, Scharstein \harvardand\
+  Szeliski}{2006}{seitz_comparison_2006}
+Seitz, S.~M., Curless, B., Diebel, J., Scharstein, D. \harvardand\ Szeliski, R.
+   \harvardyearleft 2006\harvardyearright , A comparison and evaluation of
+  multi-view stereo reconstruction algorithms, {\em in} `Computer vision and
+  pattern recognition, 2006 {IEEE} {Computer} {Society} {Conference} on',
+  Vol.~1, IEEE, pp.~519--528.
+\newblock Accessed 9 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1640800}}
+
+\harvarditem[Strasdat et~al.]{Strasdat, Montiel \harvardand\
+  Davison}{2010}{strasdat_scale_2010}
+Strasdat, H., Montiel, J. M.~M. \harvardand\ Davison, A.~J.  \harvardyearleft
+  2010\harvardyearright , Scale {Drift}-{Aware} {Large} {Scale} {Monocular}
+  {SLAM}.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://webdiis.unizar.es/~josemari/strasdat_etal_rss2010.pdf}}
+
+\harvarditem{Tsai}{1987}{tsai_versatile_1987}
+Tsai, R.  \harvardyearleft 1987\harvardyearright , `A versatile camera
+  calibration technique for high-accuracy 3d machine vision metrology using
+  off-the-shelf {TV} cameras and lenses', {\em IEEE Journal of Robotics and
+  Automation} {\bf 3}(4),~323--344.
+
+\harvarditem[Vedula et~al.]{Vedula, Rander, Collins \harvardand\
+  Kanade}{2005}{vedula_three-dimensional_2005}
+Vedula, S., Rander, P., Collins, R. \harvardand\ Kanade, T.  \harvardyearleft
+  2005\harvardyearright , `Three-dimensional scene flow', {\em Pattern Analysis
+  and Machine Intelligence, IEEE Transactions on} {\bf 27}(3),~475--480.
+\newblock Accessed 9 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1388274}}
+
+\harvarditem{Wakefield \harvardand\ News}{2014}{wakefield_one_2014}
+Wakefield, J. \harvardand\ News, B. B.~C.  \harvardyearleft
+  2014\harvardyearright , `One wi-fi hotspot for every 150 people, says study'.
+\newblock Accessed 16 October 2015.
+\newline\harvardurl{\url{http://www.bbc.com/news/technology-29726632}}
+
+\harvarditem[Weiss et~al.]{Weiss, Newcombe \harvardand\
+  Beall}{2014}{weiss_visual_2014}
+Weiss, S., Newcombe, R. \harvardand\ Beall, C.  \harvardyearleft
+  2014\harvardyearright , `Visual {SLAM} {Tutorial} {\textbar} at {CVPR} 2014'.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://frc.ri.cmu.edu/~kaess/vslam_cvpr14/}}
+
+\harvarditem[Whitaker et~al.]{Whitaker, Crampton, Breen, Tuceryan \harvardand\
+  Rose}{1995}{whitaker_object_1995}
+Whitaker, R.~T., Crampton, C., Breen, D.~E., Tuceryan, M. \harvardand\ Rose, E.
+   \harvardyearleft 1995\harvardyearright , Object calibration for augmented
+  reality, {\em in} `Computer {Graphics} {Forum}', Vol.~14, Wiley Online
+  Library, pp.~15--27.
+\newblock Accessed 15 October 2015.
+\newline\harvardurl{\url{http://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.1995.cgf143_0015.x/abstract}}
+
+\harvarditem{Ye}{2015}{ye_smartphone_2015}
+Ye, S.  \harvardyearleft 2015\harvardyearright , `Smartphone {Futurology}:
+  {The} science behind your next phone's processor and memory'.
+\newblock Accessed 16 October 2015.
+\newline\harvardurl{\url{http://www.androidcentral.com/smartphone-futurology-3-chips}}
+
+\harvarditem[Yeh et~al.]{Yeh, Tollmar \harvardand\
+  Darrell}{2004}{yeh_searching_2004}
+Yeh, T., Tollmar, K. \harvardand\ Darrell, T.  \harvardyearleft
+  2004\harvardyearright , Searching the web with mobile images for location
+  recognition, {\em in} `Computer {Vision} and {Pattern} {Recognition}, 2004.
+  {CVPR} 2004. {Proceedings} of the 2004 {IEEE} {Computer} {Society}
+  {Conference} on', Vol.~2, IEEE, pp.~II--76.
+\newblock Accessed 14 October 2015.
+\newline\harvardurl{\url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1315147}}
+
+\end{thebibliography}

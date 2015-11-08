@@ -1,0 +1,420 @@
+% Chapter 4
+
+\chapter{Results} % Write in your own chapter title
+\label{Chapter4}
+\lhead{Chapter 4. \emph{Results}} % Write in your own chapter title to set the page header
+\vspace{-5mm}
+This chapter focuses on the procedure followed to test the concept and steps detailed in chapter \ref{concept}. The results obtained will be compared to the reference heights in figure \ref{furnitureDim} at a scene scale and at the object scale. 
+
+\section{Instruments Used}
+Scenes were scanned using the \href{http://www.zf-laser.com/Z-F-IMAGER-R-5010C.3d_laserscanner.0.html?&L=1}{Z+F IMAGER\textsuperscript{\textregistered} 5010C 3D Laser scanner} as it readily provided a point cloud.
+
+
+\subsection{Software Used}
+The following software packages were used:
+\begin{itemize}
+	\item The program was written in the C++ 11 programming language 
+	\item \href{http://pointclouds.org/}{PCL} 1.7.2 with the \href{http://unanancyowen.com/?p=1255&lang=en}{Pre-Built binary for Visual Studio (VS) 2013} was used to process the point cloud. The library included the dependencies listed below:
+	\begin{itemize}
+		\item \href{http://www.boost.org/}{Boost 1.57.0} provided support for multithreading and linear algebra calculations.
+		\item \href{http://eigen.tuxfamily.org/index.php?title=Main_Page}{Eigen 3.2.4} was used for matrix and vector calculations.
+		\item The \href{http://www.cs.ubc.ca/research/flann/}{FLANN 1.8.4} library performed the nearest neighbour searches.
+		\item \href{http://www.vtk.org/}{VTK 6.2.0} was used to display the point clouds.
+		\item \href{http://www.qhull.org/}{QHull 2012.1} was used to determine the convex hull of a set of points.
+	\end{itemize}
+	\item The following items were Integrated Development Environments (IDE's). Both were Windows 64-bit editions to allow for increased performance and they both used the VS 2013 compiler. This allowed multiple clouds to be processed simultaneously without the need to code this feature into the program. 
+	\begin{itemize}
+		\item \href{https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx}{VS 2013 Community Edition by Microsoft\textsuperscript{\textregistered} Windows 64-bit} 
+		\item \href{http://www.qt.io/download-open-source/}{Qt 5.5.1 Open Source} Cross-Platform Application Framework with Windows 64-bit VS 2013 Host
+	\end{itemize}
+	
+	\item \href{http://www.danielgm.net/cc/}{CloudCompare} 3D Point Cloud and Mesh Processing Software - Used to view the processed clouds.
+	\item \href{https://www.continuum.io/downloads}{Anaconda Scientific Package} for Windows 64-bit with Python 3.4 was used to write a program that could create weighted histograms:
+	\begin{itemize}
+		\item \href{http://www.liclipse.com/}{LiClipse 2.4.0} was the python IDE that was used.
+		\item \href{http://www.numpy.org/}{Numpy 1.9.2} was used to create the weighted histogram arrays.
+		\item \href{https://plot.ly/python/}{Plotly Python API 1.8.8} was used to display the graphs.
+	\end{itemize}
+	\item \href{www.microsoftstore.com}{Microsoft\textsuperscript{\textregistered} Office Excel 2013} was used to perform the F-tests. 
+\end{itemize}
+
+\section{Horizontal and Vertical Planes}
+The angle between the normal to the plane and the vertical was used to determine whether the plane was horizontal or vertical. These segments were written to separate folders and the results of this can be seen in figures \ref{FinalEGS} to \ref{FinalSnape} on the following pages. Horizontal segments that have been recognised as desks or chairs (seats) are coloured in blue and green respectively. 
+
+The EGS Seminar Room had the least occlusions or shadows cast which was attributed to the relatively small size of the room and the scanner height (offering a good vantage point). The Geomatics Postgraduate Computer Lab had the most occlusions for the desks (due to the scanner being placed at the same height as the cubicle dividers which obstructed the view). Snape 3C had the largest shadows cast due to the size of the room and only one scan location being used. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth,center]{./images/"EGS"}
+	(a)
+	\includegraphics[width=1.0\textwidth,center]{./images/"VEGS_Oblique"}
+	(b)
+	\includegraphics[width=1.0\textwidth,center]{./images/"HEGS_Oblique2"}
+	(c)
+	\caption[Results of the plane segmentation for the EGS Seminar Room]{\textbf{(a):} EGS original point cloud. \textbf{(b):} Vertical Planes. \textbf{(c):} Horizontal Planes: Desks are coloured blue, chairs are coloured green.\label{FinalEGS}}
+\end{figure}
+\clearpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth,center]{./images/"DeepSpace"}
+	(a)
+	\includegraphics[width=1.0\textwidth,center]{./images/"VDeepSpace"}
+	(b)
+	\includegraphics[width=1.0\textwidth,center]{./images/"HDeepSpace"}
+	(c)
+	\caption[Results of the plane segmentation for the Geomatics Postgrad Lab]{\textbf{(a):} Geomatics Postgraduate Lab original point cloud. \textbf{(b):} Vertical Planes. \textbf{(c):} Horizontal Planes: Desks are coloured blue, chairs are coloured green.\label{FinalDeepSpace}}
+\end{figure}
+\clearpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth,center]{./images/"Snape3C"}
+	(a)
+	\includegraphics[width=1.0\textwidth,center]{./images/"VSnape3C"}
+	(b)
+	\includegraphics[width=1.0\textwidth,center]{./images/"HSnape3C"}
+	(c)
+	\caption[Results of the plane segmentation for Snape 3C]{\textbf{(a):} Snape 3C original point cloud. \textbf{(b):} Vertical Planes. \textbf{(c):} Horizontal Planes: Desks are coloured blue, chairs are coloured green.\label{FinalSnape}}
+\end{figure}
+\clearpage
+\section{Scene Analysis \label{sceneAnalysis}}
+Histograms of the horizontal height segments for each scene were combined into a single graph depicting heights of segments within the scenes. Each spike in the data depicts a cluster of objects at a respective height. Objects were weighted using the number of points per segment which compensated for under-segmentation (rows of desks formed a single segment rather than separate segments). By weighting the data each spike represents the relative size of the cluster of segments at a given height. For instance the ceiling of the Geomatics Postgraduate Computer Lab, Snape 3C and the EGS Seminar Room can be identified by the spikes occurring at $2.5m$, $3.25m$ and the range between $3.5-3.8m$ respectively. This is verified by the low ceiling of the postgraduate lab, the large ceiling  of Snape 3C (hence the very large spike at $3.25$ in orange in figure \ref{Histogram}) and the pointed ceiling of the EGS Seminar Room (illustrated by the pointed nature of the back wall in the top and middle of figure \ref{EGS} and \ref{FinalEGS}).
+
+\begin{figure}[h!]
+	\centering
+	\vspace{-2.5mm}
+	\includegraphics[width=1.25\textwidth,center]{./Figures/"GraphLABELS"}
+	\vspace{-10mm}
+	\caption[Histogram of height clusters per scene]{Histogram of height clusters per scene for the horizontal segments. These were weighted by point count per segment. \label{Histogram}}
+\end{figure}
+\clearpage
+
+Once the spikes on the extreme ends of the graph in figure \ref{Histogram} were identified as the floors and ceiling focus was shifted to the clusters in-between. Figure \ref{HistogramZoom} below illustrates the height range between $0.20-0.80m$ in greater detail. The clusters here represent objects in the form of horizontal planes at a height range that is accessible by those standing or sitting in the room. These objects are divided into two groups namely chairs and tables or desks. The spikes for desks or tables ($72-80cm$) are larger than chairs ($45-53cm$) due to the larger surface area they have, it does not necessarily infer that a higher number of these items were identified.  
+
+%\vspace{1cm}
+\begin{figure}[h!]
+	\centering
+	\vspace{-2.5mm}
+	\includegraphics[width=1.25\textwidth,center]{./Figures/"ZoomedGraphLABELS"}
+	\vspace{-10mm}
+	\caption[Histogram illustrating the objects in each room]{Histogram of horizontal segments that lie between $0.2-0.8m$. These are the objects within each room. \label{HistogramZoom}}
+\end{figure}
+
+Table \ref{scale} illustrates the difference in height values between the reference heights listed in table \ref{furnitureDim} and the average height calculated from the group of classified segments for each room. The average of the values listed in table \ref{furnitureDim} was taken where a range of values were listed. The scale obtained for each room is depicted in figure \ref{scalegraph} and compared to the average scale (represented by the bar coloured in red).
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{1.25cm}|p{2cm}|p{3.5cm}|p{1.85cm}|p{2cm}|p{1.25cm}|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{\underline{Deriving Scale from Recognised Objects}}} \\
+%		\hline
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Geomatics Postgraduate Lab}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 74cm & 75.22cm & 1.016 & 1.22cm & 1.65\% \\
+		Chair & 49cm & 47.94cm & 0.978 & -1.06cm & -2.17\% \\
+		\hline
+		& & Average & 0.997 & 0.08cm &\\
+%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{EGS Seminar Room}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 74cm & 76.47cm & 1.033 & 2.47cm & 3.34\% \\
+		Chair & 49cm & 50.01cm & 1.021 & 1.01cm & 2.06\% \\
+		\hline
+		& & Average & 1.027 & 1.74cm &\\
+%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Snape 3C}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 74cm & 76.93cm & 1.040 & 2.93cm & 3.96\% \\
+		Chair & 49cm & 48.54cm & 0.991 & -0.46cm & -0.94\% \\
+		\hline
+		& & Average & 1.015 & 1.23cm &\\
+		\hline
+%		\hhline{|=|=|=|=|=|=|}
+		\multicolumn{6}{|c|}{\textbf{Overall Scale}: \textbf{1.013}}\\
+%		& & \textbf{Overall Average Scale} & \textbf{1.057} & & \\
+		\hline
+	\end{tabular}
+	\caption[Comparing measured and reference heights for identified objects per scene]{Comparison of measured and reference heights for desks and chairs that were identified within each scene.}
+	\label{scale}
+\end{table}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.125\textwidth,center]{./Figures/"scales"}
+	\caption{Bar graph of scales attained per room. \label{scalegraph}}
+\end{figure}
+\clearpage
+
+Chairs in each scene were on average $0.17cm$ lower than the reference height whilst desks were $ 2.21cm $ higher (calculated by taking the mean of the averages for object types in each scene illustrated in figure \ref{scale}). This represents a ratio of $-0.35\%$ and $2.98\%$ for chairs and desks respectively between the measured and reference heights. 
+
+Table \ref{scale} and figure \ref{scalegraph} illustrated the discrepancy between the reference heights for chairs and desks. The scale obtained in table \ref{scale} was then applied to the scenes in order to bring the heights of objects closer to that of the reference heights. This was done to illustrate the difference between the heights of chairs and desks with respect to each scene rather than with respect to the reference heights. The results of this can be seen in table \ref{scale2} and figure \ref{scalegraph2}.
+
+\vspace{1cm}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{1.25cm}|p{2cm}|p{3.5cm}|p{1.85cm}|p{2cm}|p{1.25cm}|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{\underline{Results of Applying New Scale to Scenes}}} \\
+		%		\hline
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Geomatics Postgraduate Lab}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 74cm & 74.24cm & 1.003 & 0.24cm & 0.33\% \\
+		Chair & 49cm & 47.31cm & 0.966 & -1.69cm & -3.44\% \\
+		\hline
+		& & Average & 0.984 & -0.72cm &\\
+		%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{EGS Seminar Room}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 74cm & 75.48cm & 1.020 & 1.48cm & 1.99\% \\
+		Chair & 49cm & 49.36cm & 1.007 & 0.36cm & 0.73\% \\
+		\hline
+		& & Average & 1.014 & 0.92cm &\\
+		%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Snape 3C}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 74cm & 75.93cm & 1.026 & 1.93cm & 2.61\% \\
+		Chair & 49cm & 47.91cm & 0.978 & -1.09cm & -2.22\% \\
+		\hline
+		& & Average & 1.002 & 0.42cm &\\
+		\hline
+		%		\hhline{|=|=|=|=|=|=|}
+		\multicolumn{6}{|c|}{\textbf{New Overall Scale}: \textbf{1.000}}\\
+		%		& & \textbf{Overall Average Scale} & \textbf{1.057} & & \\
+		\hline
+	\end{tabular}
+	\caption[The effect of scaling the scene to get closer to the reference heights]{Table showing the effect of scaling each scene such that the objects are closer to their respective reference height.}
+	\label{scale2}
+\end{table}
+\vspace{1cm}
+
+\clearpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.185\textwidth,center]{./Figures/"scales2"}
+	\caption[Bar graph illustrating the effect of scaling the scenes]{Bar graph illustrating the effect of applying the scale of $1.013$ to each scene. \label{scalegraph2}}
+\end{figure}
+
+\section{Object Analysis \label{objectanalysis}}
+
+The heights of objects were then normalised by dividing the height of each recognised object by $80cm$ (this is the highest a desk could be given the parameters laid out in chapter \ref{LevObjRecog}). This was done to analyse the relationship between desks and chairs rather than to the reference heights as in chapter \ref{sceneAnalysis}. 
+
+The analysis of heights took place at the scene scale in the previous chapter which is why there is a larger difference in overall scene scales between tables \ref{scale} and \ref{scale2} compared to tables \ref{scale3} and \ref{scale4} as these took place at the object scale by using normalised heights. These tables (\ref{scale3} and \ref{scale4}) along with their accompanying figures (\ref{scalegraph3} and \ref{scalegraph4}) can be found on the following two pages.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{1.25cm}|p{2cm}|p{3.5cm}|p{1.85cm}|p{2cm}|p{1.25cm}|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{\underline{Deriving Scale using Normalised Heights}}} \\
+		%		\hline
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Geomatics Postgraduate Lab}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 0.92 & 0.94 & 1.016 & 0.015 & 1.65\% \\
+		Chair & 0.61 & 0.59 & 0.967 & -0.020 & -3.33\% \\
+		\hline
+		& & Average & 0.992 & 0.003 &\\
+		%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{EGS Seminar Room}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 0.92 & 0.96 & 1.033 & 0.031 & 3.34\% \\
+		Chair & 0.61 & 0.61 & 0.97 & -0.002 & -0.30\% \\
+		\hline
+		& & Average & 1.015 & 0.015 &\\
+		%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Snape 3C}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 0.92 & 0.96 & 1.038 & 0.035 & 3.77\% \\
+		Chair & 0.61 & 0.61 & 0.991 & -0.006 & -0.94\% \\
+		\hline
+		& & Average & 0.014 & 0.015 &\\
+		\hline
+		%		\hhline{|=|=|=|=|=|=|}
+		\multicolumn{6}{|c|}{\textbf{Overall Scale}: \textbf{1.007}}\\
+		%		& & \textbf{Overall Average Scale} & \textbf{1.057} & & \\
+		\hline
+	\end{tabular}
+	\caption[Comparing measured and reference heights using normalised values]{Comparison of measured and reference heights using normalised values for identified objects within each scene.}
+	\label{scale3}
+\end{table}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.125\textwidth,center]{./Figures/"scales3"}
+	\caption{Bar graph illustrating the effect of applying a scale to each scene. \label{scalegraph3}}
+\end{figure}
+
+\clearpage
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{1.25cm}|p{2cm}|p{3.5cm}|p{1.85cm}|p{2cm}|p{1.25cm}|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{\underline{Results of Applying Scale Derived from Normalised Heights to Scenes}}} \\
+		%		\hline
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Geomatics Postgraduate Lab}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 0.92 & 0.93 & 1.009 & 0.009 & 0.94\% \\
+		Chair & 0.61 & 0.60 & 0.971 & -0.017 & -2.85\% \\
+		\hline
+		& & Average & 0.990 & -0.004 &\\
+		%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{EGS Seminar Room}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 0.92 & 0.95 & 1.026 & 0.024 & 2.62\% \\
+		Chair & 0.61 & 0.62 & 1.013 & 0.008 & 1.35\% \\
+		\hline
+		& & Average & 1.020 & 0.016 &\\
+		%		\hhline{|=|=|=|=|=|=|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Snape 3C}} \\
+		\hline
+		Object & Reference Height & Average Measured Height & Scale & Difference & Ratio \\
+		\hline
+		Desk & 0.92 & 0.95 & 1.032 & 0.030 & 3.24\% \\
+		Chair & 0.61 & 0.60 & 0.984 & -0.010 & -1.63\% \\
+		\hline
+		& & Average & 1.008 & 0.010 &\\
+		\hline
+		%		\hhline{|=|=|=|=|=|=|}
+		\multicolumn{6}{|c|}{\textbf{New Overall Scale}: \textbf{1.006}}\\
+		%		& & \textbf{Overall Average Scale} & \textbf{1.057} & & \\
+		\hline
+	\end{tabular}
+	\caption{Table showing the effect of scaling each scene using the scale obtained from the normalised height values.}
+	\label{scale4}
+\end{table}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth,center]{./Figures/"scales4"}
+	\caption[Bar graph illustrating the effect of scaling the scenes with normalised values]{Bar graph illustrating the effect of applying a scale of $1.007$ to each scene. \label{scalegraph4}}
+\end{figure}
+
+\section{F-Test}
+An F-test was performed to determine if the heights for each object between scenes belonged to the same population. An example of this for chairs (using non-normalised heights) can be seen below in figure \ref{FtestTable} whilst the results for all the scenes can be found in matrix form within tables \ref{matrixNonNormal} and \ref{matrixNormal}.
+\vspace{1cm}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4.5cm}|R{3cm}|R{3cm}|}
+		\hline
+		\multicolumn{3}{|c|}{\textbf{\underline{F-Test Two-Sample Variances at 95\% Significance Level}}} \\
+		\hline
+		Chairs & EGS & Snape \\
+		\hline
+		 & Variable 1 & Variable 2 \\
+		\hline
+		Mean & 0.500069 & 0.485241\\
+		Variance & 0.000327 & 0.000271\\
+		Observations & 12 & 19\\
+		dF & 11 & 18\\
+		F & 1.205032 & \\
+		P($F<=f$) one-tail & 0.350179 & \\
+		F Critical one-tail & 2.374155 & \\
+		\hline
+		Verdict & PASS & \\
+		\hline
+	\end{tabular}
+	\caption[Table showing the results of an F-Test]{Table showing the results of an F-Test performed in \href{www.microsoftstore.com}{Microsoft\textsuperscript{\textregistered} Office Excel 2013}}
+	\label{FtestTable}
+\end{table}
+\vspace{1cm}
+%\vspace{-0.75mm}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
+		\hline
+		\multicolumn{4}{c}{\textbf{\underline{F-Test Two-Sample Variances at 95\% Significance Level}}} \\
+		\hline
+		\multicolumn{4}{c}{\underline{Desks}} \\
+		\hline
+		\multicolumn{1}{l}{\cellcolor{gray!25}} & \multicolumn{1}{l}{\cellcolor{gray!25} Postgrad Lab } & \multicolumn{1}{l}{\cellcolor{gray!25} EGS } & \multicolumn{1}{l}{\cellcolor{gray!25} Snape}\\
+		\cellcolor{gray!25} Postgrad Lab & - & \cellcolor{green!50} PASS & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} EGS & \cellcolor{green!50} PASS & - & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} Snape & \cellcolor{green!50} PASS & \cellcolor{green!50} PASS & - \\
+		\hline
+		\multicolumn{4}{c}{\underline{Chair}} \\
+		\hline
+		\multicolumn{1}{l}{\cellcolor{gray!25}} & \multicolumn{1}{l}{\cellcolor{gray!25} Postgrad Lab } & \multicolumn{1}{l}{\cellcolor{gray!25} EGS } & \multicolumn{1}{l}{\cellcolor{gray!25} Snape}\\
+		\cellcolor{gray!25} Postgrad Lab & - & \cellcolor{green!50} PASS & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} EGS & \cellcolor{green!50} PASS & - & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} Snape & \cellcolor{green!50} PASS & \cellcolor{green!50} PASS & - \\
+		\hline
+	\end{tabular}
+	\caption{Matrix of F-Test results for non-normalised heights.}
+	\label{matrixNonNormal}
+\end{table}
+
+\clearpage
+\vspace*{1mm}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
+		\hline
+		\multicolumn{4}{c}{\textbf{\underline{F-Test Two-Sample Variances at 95\% Significance Level}}} \\
+		\hline
+		\multicolumn{4}{c}{\underline{Desks}} \\
+		\hline
+		\multicolumn{1}{l}{\cellcolor{gray!25}} & \multicolumn{1}{l}{\cellcolor{gray!25} Postgrad Lab } & \multicolumn{1}{l}{\cellcolor{gray!25} EGS } & \multicolumn{1}{l}{\cellcolor{gray!25} Snape}\\
+		\cellcolor{gray!25} Postgrad Lab & - & \cellcolor{green!50} PASS & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} EGS & \cellcolor{green!50} PASS & - & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} Snape & \cellcolor{green!50} PASS & \cellcolor{green!50} PASS & - \\
+		\hline
+		\multicolumn{4}{c}{\underline{Chair}} \\
+		\hline
+		\multicolumn{1}{l}{\cellcolor{gray!25}} & \multicolumn{1}{l}{\cellcolor{gray!25} Postgrad Lab } & \multicolumn{1}{l}{\cellcolor{gray!25} EGS } & \multicolumn{1}{l}{\cellcolor{gray!25} Snape}\\
+		\cellcolor{gray!25} Postgrad Lab & - & \cellcolor{green!50} PASS & \cellcolor{red!25} FAIL \\
+		\cellcolor{gray!25} EGS & \cellcolor{green!50} PASS & - & \cellcolor{green!50} PASS \\
+		\cellcolor{gray!25} Snape & \cellcolor{red!25} FAIL & \cellcolor{green!50} PASS & - \\
+		\hline
+	\end{tabular}
+	\caption{Matrix of F-Test results for normalised heights.}
+	\label{matrixNormal}
+\end{table}
+\vspace{1cm}
+Table \ref{matrixNonNormal} illustrates that all the scenes pass the analysis of variance test for both desks and chairs. Using normalised heights however the F-test fails when comparing the variance of heights for chairs between the Geomatics Postgraduate Lab and the Snape 3C classroom as seen in table \ref{matrixNormal}. This can be attributed to the large difference in degrees of freedom between the two scenes ($4$ and $19$ respectively) and the fact that using normalised heights lowers the amount of allowable variation between samples. This is because the normalised heights allow the relationship between the desks and chairs to be analysed which is at a finer scale than analysing the objects within the scene as a whole
+
+\section{Summary of Results \label{summaryresults}}
+Table \ref{scale} illustrates the degree to which the average height of desks and chairs in a scene deviated from their respective reference height. The degree to which they differed is represented by the two columns labelled `Difference' and `Ratio' in table \ref{scale}. The values within these columns and the results that follow in the upcoming paragraph were calculated using the following equations:
+
+\begin{equation}\label{diff}
+Difference = Average\ Measured\ Height\ - Reference\ Height
+\end{equation}
+\begin{equation}\label{ratio}
+Ratio = \frac{Difference}{Reference\ Height}
+\end{equation}
+
+The maximum ratio was $3.96\%$ for desks which meant that the desks were $2.93cm$ taller than their expected (reference) height (as illustrated in figure \ref{scale}). The smallest difference between measured and reference heights were for chairs at $-0.94\%$ which resulted in them being $0.46cm$ shorter than their reference height, also from figure \ref{scale}. Both of these occurred for the newly constructed and furnished Snape 3C classroom which had the highest number of desks and chairs.
+
+Height values were normalised in order to analyse the relationship between desks and chairs. This yielded more accurate results. The values quoted here come from tables \ref{scale3} and \ref{scale4}. Where relevant they have been converted back to their non-normalised form by multiplying them out by $80cm$ as described in chapter \ref{objectanalysis}. The largest deviation from normalised reference heights was for desks at $3.77\%$ which resulted in a $2.8cm$ discrepancy. The smallest deviation using normalised values was for chairs at $0.30\%$ which meant they were $0.16cm$ shorter than their normalised reference height. By analysing the relationship between chairs and desks rather than the scene as a whole a more robust scale was determined. The scale obtained through normalised heights ($1.007$) was applied to the scenes again and the resulting scale ($1.006$) only varied by a factor of $0.001$ from the original (as seen in figure \ref{scalegraph4}). Comparatively when this process was performed using non-normalised heights the difference in scale was $0.013$ as seen in figure \ref{scalegraph2}.
+
+Figure \ref{Histogram} illustrates the difference in both ceiling height and type between the scenes. The Geomatics Postgraduate Lab and Snape 3C had flat ceilings whilst the EGS Seminar Room had an open ceiling which exposed the pointed nature of the roof. None of the rooms had the same ceiling height however which means that each room had different wall heights. Therefore walls and ceilings do not represent objects with dimensions that can serve as reliable estimates upon which to determine scale. 
+

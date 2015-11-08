@@ -1,0 +1,57 @@
+\contentsline {chapter}{Declaration of Authorship}{i}{dummy.1}
+\vspace {1em}
+\contentsline {chapter}{Abstract}{v}{dummy.3}
+\vspace {1em}
+\contentsline {chapter}{Acknowledgements}{vi}{dummy.4}
+\vspace {1em}
+\contentsline {chapter}{List of Figures}{ix}{dummy.6}
+\contentsline {chapter}{List of Tables}{x}{dummy.8}
+\contentsline {chapter}{Abbreviations}{xi}{dummy.10}
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.13}
+\contentsline {section}{\numberline {1.1}Background}{1}{section.14}
+\contentsline {section}{\numberline {1.2}Problem Statement }{2}{section.15}
+\contentsline {section}{\numberline {1.3}Research Objective}{2}{section.16}
+\contentsline {section}{\numberline {1.4}Methodology}{2}{section.17}
+\contentsline {section}{\numberline {1.5}Expected Outcomes}{3}{section.18}
+\contentsline {section}{\numberline {1.6}Scope and Limitations}{3}{section.19}
+\contentsline {section}{\numberline {1.7}Outline of Report}{3}{section.20}
+\contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.21}
+\contentsline {section}{\numberline {2.1}Sources of PCD}{5}{section.22}
+\contentsline {subsection}{\numberline {2.1.1}Structure from Motion}{5}{subsection.23}
+\contentsline {subsection}{\numberline {2.1.2}Multi-View Stereo }{6}{subsection.25}
+\contentsline {section}{\numberline {2.2}Obtaining a Real-World Scale for PCD}{8}{section.27}
+\contentsline {subsection}{\numberline {2.2.1}Manual Measurements}{8}{subsection.28}
+\contentsline {subsection}{\numberline {2.2.2}Use of Known Objects }{9}{subsection.30}
+\contentsline {subsection}{\numberline {2.2.3}Content-Based Image Retrieval}{12}{subsection.34}
+\contentsline {section}{\numberline {2.3}Discussion}{14}{section.36}
+\contentsline {subsection}{\numberline {2.3.1}Augmented Reality}{14}{subsection.37}
+\contentsline {subsection}{\numberline {2.3.2}Simultaneous Localization and Mapping}{15}{subsection.39}
+\contentsline {subsection}{\numberline {2.3.3}Mobile Devices}{17}{subsection.41}
+\contentsline {subsection}{\numberline {2.3.4}Indoor Scene Analysis for Point Clouds }{18}{subsection.42}
+\contentsline {subsection}{\numberline {2.3.5}Object Recognition for Indoor Point Clouds}{20}{subsection.45}
+\contentsline {chapter}{\numberline {3}Method}{23}{chapter.48}
+\contentsline {section}{\numberline {3.1}Concept}{23}{section.49}
+\contentsline {subsection}{\numberline {3.1.1}Scanning and Pre-Processing Procedure}{28}{subsection.55}
+\contentsline {section}{\numberline {3.2}Processing PCD}{28}{section.56}
+\contentsline {subsection}{\numberline {3.2.1}Point Normals}{29}{subsection.58}
+\contentsline {subsection}{\numberline {3.2.2}Region Growing Segmentation }{31}{subsection.73}
+\contentsline {subsection}{\numberline {3.2.3}PCA}{33}{subsection.75}
+\contentsline {section}{\numberline {3.3}Leveraging Object Recognition }{34}{section.78}
+\contentsline {section}{\numberline {3.4}Histogram of Heights and F-Test}{35}{section.80}
+\contentsline {chapter}{\numberline {4}Results}{36}{chapter.82}
+\contentsline {section}{\numberline {4.1}Instruments Used}{36}{section.83}
+\contentsline {subsection}{\numberline {4.1.1}Software Used}{36}{subsection.84}
+\contentsline {section}{\numberline {4.2}Horizontal and Vertical Planes}{37}{section.85}
+\contentsline {section}{\numberline {4.3}Scene Analysis }{41}{section.89}
+\contentsline {section}{\numberline {4.4}Object Analysis }{45}{section.96}
+\contentsline {section}{\numberline {4.5}F-Test}{48}{section.101}
+\contentsline {section}{\numberline {4.6}Summary of Results }{49}{section.105}
+\contentsline {chapter}{\numberline {5}Conclusion}{51}{chapter.108}
+\contentsline {chapter}{\numberline {6}Recommendations}{53}{chapter.109}
+\contentsline {section}{\numberline {6.1}Object Recognition}{53}{section.110}
+\contentsline {subsection}{\numberline {6.1.1}Development of a Smartphone Application}{53}{subsection.111}
+\contentsline {subsection}{\numberline {6.1.2}Web-based Applications}{55}{subsection.112}
+\vspace {2em}
+\vspace {2em}
+\contentsline {chapter}{Bibliography}{i}{dummy.113}

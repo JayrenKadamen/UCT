@@ -1,0 +1,88 @@
+If only one object is used to scale the scene then these errors are cumulative as a function of the distance between the recognised object and the remainder of the scene emanating outwards from it. This results in non-uniform measurement values throughout the scene but this can be mitigated by using multiple objects placed at key locations throughout the scene. This provides a uniform error distribution compared to a cumulative one but the efficacy of this solution is also tied to the placement of known objects within the scene in order to provide good geometry \citep{rashidi_generating_2014}.
+
+
+
+
+%FEATURE SPACE EXAMPLE AND AVERAGE HEIGHT OF A CHAIR
+
+Objects are described by a unique collection of features such as colour, shape, and texture \citep{davidson-pilon_machine_2012}. Each feature forms an axis in an $n$-dimensional arbitrary feature-space where $n$ represents the number of features used to describe a particular object. Take the following feature space example:
+
+\textbf{Object}
+\begin{enumerate}
+	\item $D \equiv $ Desk \\
+	\textbf{Features}
+	\begin{enumerate}
+		\item $X_1 \equiv$ Height of tabletop
+		\item $X_2 \equiv$ Surface smoothness
+		\item $X_3 \equiv$ Number of legs
+	\end{enumerate}
+\end{enumerate}
+
+With three features to describe the object this results in the desk having a feature space of dimension $3$ where the axes range from $X_1$ to $X_3$. The average number of legs and tabletop height for a desk is four and $\approx74cm$ respectively \citep{budnick_29_2014}.
+
+\section{POSSIBLE INTRO STUFF}
+A point-cloud is a collection of n-dimensional ($nD$) points, where $n=3$  represents point positions in the real world (X,Y,Z coordinates). Point clouds store more than just positional data such as colour (RGB), intensity of return (of the laser signal), and range. 
+
+Point clouds originate from both active (laser scanners) and passive (stereo camera) sensors. These collection of points are used for a variety of purposes from computer vision (allowing robots the ability to perceive 3D environments) to forming the basis of generating accurate object models (spatial occupancy enumeration or solid modelling). 
+
+Before solving the problem of attaining a non-arbitrary scale for a point cloud there are a few tools that must be understood first. Point-cloud processing has seen research predominantly within the field of computer-vision and as such the tools detailed in the following subsections all originate from branches of the computer-vision field.
+
+Camera's are used extensively in computer-vision problems due to their relative affordability in comparison to active sensors such as laser scanners. As such this chapter will first examine the pinhole camera model and explain why a non-arbitrary is difficult to attain with remotely sensed data. It will then discuss current fields of research that have attempted to solve the problem before detailing specific papers which have been invaluable resources to the research conducted herein. 
+
+
+\section{Pinhole Camera Model\label{pinholechapter}}
+The pinhole camera model is used throughout stereo-restitution and computer vision problems as the set of parameters which relate a 3D point in object space to its corresponding 2D point in image space. With reference to figure \ref{pinhole} the pinhole model makes the assumption that all incident rays of light pass through a single point called the perspective centre, $C$ and that there exists a linear relationship between the position of the image point $x$ and the ray $CX$. In figure \ref{pinhole} below $(X,Y,Z)$ and $(x,y)$ represent the coordinate axes of object-space and image-space respectively. The camera centre, $C$, is the origin or projection centre often denoted by the point $(X_0,Y_0,Z_0)$. \textbf{X} represents a point in 3D object-space described by $(X,Y,Z)$ whilst the point \textbf{x} is the corresponding image point described by $(x,y)$. The basic concept one needs to grasp is that of the imaging ray and how it projects 3D points onto a 2D plane.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\linewidth]{./images/pinhole_camera_model.png}
+\end{center}
+\caption{Basic Illustration of Interior Orientation Parameters \citep{nozick_matrices_2015}\label{pinhole}}
+\end{figure}
+
+The vector $\vec{CX}$ illustrates how the point $\textbf{X}_{(X,Y,Z)}$ in object space (3D) is projected into the image plane $\textbf{x}_{(x,y)}$ (2D) with $C(X_0,Y_0,Z_0)$ representing the centre of projection. All the vectors of points in object space that are to be projected into image plane will meet at the centre of projection for each image. The vector $CZ$ denotes the principal axis which is defined by the line created by the origin $O(X_0,Y_0,Z_0)$ and the principal point $\textbf{p}_{(x_0,y_0)}$ (which lies on the image plane). The principal point is the point of intersection between the normal to the centre of projection and the image plane. Finally the distance from the image plane to the centre of projection is called the principal distance which is represented by the variable $c$ (not in figure \ref{pinhole}). The core concept to take from figure \ref{pinhole} is that the perspective centre, image point and object point lie on a straight line and form a fundamental relationship to many procedures in photogrammetry. Throughout this chapter reference will be made to the `internal parameters' of the camera, these are the position of the principal point and the principal distance. Due to the properties of the pinhole camera model lens distortions can be ignored but in real-world applications they should be taken into account.
+
+To attain a non-arbitrary scale when only a single camera is used other means must be used such as measuring the baseline distance between multiple views of the same scene, measuring a dimension of an object within the scene, or by using other sensors such as GPS and IMU's \citep{scaramuzza_absolute_2009-1}. This is required in order to ascertain where the camera was at the time of image acquisition (GPS) as well as the external orientation (IMU). For a point cloud obtained via a laser-scanner the precise position of the scanner at each set-up must be known which is difficult for indoor environments (due to GPS reception and inability/impracticality of setting up surveyed points indoors). The baseline distances between the multiple set-up points are used to propagate a real-world scale throughout the final point cloud. Another method is using targets whose position is precisely known in a real-world coordinate system where again the baseline distance between targets are used to derive a non-arbitrary scale for the scene.
+
+The following sections detail currently available solutions to the problem of attaining a non-arbitrary scale for point clouds, concentrating on those attained via passive sensors such as camera's due to their widespread use within the field of computer vision.
+
+\section{Multi-View Stereo \label{multi-view baseline}}
+This section will draw from the work of \citet{hartley_multiple_2003} which wrote a book entitled \textit{Multiple View Geometry in Computer Vision}. It is widely referred to as the `bible' of multiple view geometry for computer vision applications and forms part of the core literature for the course: Mathematics of 3D Image Synthesis at Harvard University \citep{knill_core_2008}.
+
+Chapter \ref{pinholechapter} details the properties of the pinhole camera model, a projective transformation that maps $3D$ scene points onto a $2D$ image plane. This transformation suffers from geometric distortions such as shape, lengths, angles, and ratio's of distances. Not all geometric properties are lost however, straight lines are preserved. In Euclidean space parallel lines never meet and as such they are the exception to the rule that all lines meet at a point. In projective space \textbf{all} lines must meet at a point, sometimes however this point is at infinity, $\infty$, thus distinguishing it from Euclidean space geometry.
+
+The primary goal of multi-view stereo is given multiple views of an object or scene a 3D model must be computed \citep{seitz_comparison_2006}. `Scene flow' is an expansion of this which includes scenes that have been captured using imaging platforms that move in a non-rigid manner such as video \citep{vedula_three-dimensional_2005}. Points from the same object within a scene captured from multiple images need to be matched and anchored to the same physical point. This is a difficult task as multiple views of the same scene often result in objects being subject to occlusion between images, perceived changes in shape and alteration of appearance. 
+
+There are a number of algorithms that fall within the scope of multi-view stereo but only multiple-baseline stereo will be discussed as it is commonly used in computer vision problems. To simplify the explanation only pairs of images of the same scene will be discussed but the concept remains the same for inclusion of multiple images.
+ 
+Epipolar geometry is used to define the $3D$ relationship between pairs of images of the same scene taken with the same camera by fixing the physical position of matching points in both images \citep{klingner_university_2014}. It is reliant on the internal parameters of the camera which were discussed in chapter \ref{pinholechapter} as well as the relative orientation of the camera in object space. Due to the latter a reference image is selected which serves as a base orientation and subsequent images are slid along the epipolar lines in order to align them in relation to the reference image. A fundamental matrix $F$ stores the geometric relationship between the two images. It is a $3\times 3$ matrix of rank $2$ where a $3D$ point $X_{(x,y,z)}$ is projected onto the image plane as $x_{(x,y)}$ in the first image and $x'_{(x,y)}$ in the second image. This then satisfies the relation $x'Fx = 0$ \citep{hartley_multiple_2003}. \clearpage
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\linewidth]{./images/"epipolar_diagram"}
+	\caption{\textbf{Epipolar Geometry} \textit{(a)} The point in each image where the baseline intersects is called the epipole and is denoted by $e$ and $e'$. If a plane, $\pi$, contains the baseline it is an epipolar plane and the lines $l$ and $l'$ represent epipolar lines created as it intersects each image at their respective epipole. \textit{(b)} The epipolar planes pivot about the baseline as the $3D$ point $X$ varies. The collection of planes created by this is known as an epipolar pencil. \citep{hartley_multiple_2003}
+		\label{epipolar}}
+\end{figure}
+
+If the point $x$ is restrained (in the reference image) then the task is to constrain the corresponding point $x'$ in the other image. From the geometry illustrated above the ray corresponding the point treated as known, $x$, to the unknown $x'$ lies in the plane $\pi$ which means the point $x'$ can only lie on the line $l'$. This line is the ray back-projected from $x$ within the second image and is the epipolar line corresponding to $x$. This means that the point $x$ does not need to be searched for throughout the second image but rather simply along the line $l'$. 
+
+The fundamental matrix is computed from the relationship expressed by epipolar lines and is used to reconstruct the camera matrices (internal parameters and exterior orientation). From there a triangulation is performed to determine the point in object space that each point $x_i$ and $x'_i$ projects to. In order to gain absolute position and orientation for this reconstructed scene using two views (or any number of views) knowledge of where the scene is in a $3D$ coordinate reference frame is required \citep{hartley_multiple_2003}. Often in surveying applications this is needed, and it is achieved along with obtaining a non-arbitrary scale for the reconstructed scene by making use of control points which are known in a $3D$ Euclidean reference frame. The control points often take the form of targets which are easy to distinguish against the backdrop of the scene and these are identified in each image and given their relevant coordinates in a $3D$ reference frame. These control points are then used as points for which epipolar lines are calculated in order to determine their $3D$ location in object space. The drawback with this method is the procedure required to obtain precise locations of control points involve a survey to be performed. Whether the survey take place indoors or not it requires preparation, equipment and expertise in order to execute correctly, and the resultant metric information is reliant on the quality of the survey performed to acquire control point positions.
+
+
+\section{Use of a Known Object in a Scene to Derive Absolute-Scale}
+The paper presented by \citet{rashidi_generating_2014} details a method of obtaining real-world measurements from point cloud data that has been generated by monocular photography and videogrammetry. The problem presented with the current solution is that it requires a manual step (detailed in chapter \ref{multi-view baseline}) to obtain real-world measurements such as the use of control points and perform a survey to obtain precise coordinates or to manually measure a dimension in a scene. Both of these options introduce the possibility of human error and slows down the process of reconstructing a scene (due to the need to perform measurements in the scene manually). 
+
+The proposed solution was to make use of a calibration patterns. These came in the form of an $A4$ piece of paper for indoor scenes and a cube with known dimensions and distinctly coloured sides for outdoor scenes. The $A4$ sheet of paper was chosen as it is a commonly found item in indoor environments thus making it readily available with dimensions already known. The algorithm used is able to extract the corner points of both the cube and the $A4$ sheet in order to match them in subsequent frames. These are then used along with other features within the scene to determine a non-arbitrary scale. The method and results of the indoor scenes will be discussed. 
+
+The $A4$ sheet only requires the four corner points to be detected, as a result epipolar geometry was used to identify the corresponding points in the second view based on the assumption that the corner points follow a clockwise order. The four corners were detected by first identifying the page itself (by filtering the HSV values of the scene). A modified Hough transform to account for lines appearing curved due to lens distortions is used to identify the edges of the sheet. The edges are extended until they intersect the neighbouring edge at a point thus providing the four corners of the $A4$ sheet.
+
+To test the performance of the above concept a number of scenes were captured by means of a video taken by an off-the-shelf video camera with each scene being captured as completely as possible in order to minimise occlusions. In order to determine the discrepancy between true distances and those obtained from the generated point cloud manual measurements were made with a Leica Laser Disto. The average length measurement error for indoor scenes were $0.14cm/m$.
+\clearpage
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=(\linewidth/2)]{./images/"AbsoluteScaleMonocular"}
+	\caption{\textbf{Reconstructed Bathroom from Video} \textit{(c)} and \textit{(d)} illustrate vantage points of an indoor bathroom scene from frames of a video whilst \textit{(f)} illustrates the resulting reconstructed point cloud \citep{rashidi_generating_2014}.
+		\label{monocular}}
+\end{figure}
+
+The drawback with this solution to obtaining a real-world scale for point clouds already exist cannot have their scale determined without falling back on the existing method of measuring a dimension within the scene in the real world. That being said the results offer very promising accuracies using a medium such as video that suffers from blurring between frames, lower resolution than photography and varying principal distance (due to autofocus).

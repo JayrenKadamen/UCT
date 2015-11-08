@@ -1,0 +1,44 @@
+% Chapter 1
+\chapter{Introduction} % Write in your own chapter title
+\label{Chapter1}
+\lhead{Chapter 1. \emph{Introduction}} % Write in your own chapter title to set the page header
+
+
+\section{Background}
+In recent years acquiring a point cloud representation of a real-world scene by photogrammetric means has become increasingly popular. This can be attributed to advancements in multiple-image reconstruction algorithms, increased processing power of consumer-grade computers and the relatively inexpensive cost of cameras compared to laser scanners. Smartphones have placed a high quality imaging platform at the fingertips of billions of users \citep{richter_infographic:_2012}. This has resulted in an increased volume of remotely sensed scenes using a single camera and the rise of online image sharing services such as \href{https://www.flickr.com/}{flickr}. These services can be searched by Content-Based Imge-Retrieval (CBIR) systems to access multiple images of the same scene for reconstruction purposes. There are also new platforms entering the market that make use of a single camera to capture a scene; these include commercial drones which have a growing market-share \citep{insider_drones_2015}.
+
+Photogrammetry is not the only field that makes use of point clouds. Computer vision has made use of unstructured point clouds for indoor mapping purposes. This is because cameras are chosen over active systems such as laser scanners because they require less power and are significantly less expensive. Robotic systems that use cameras for self-navigation often make use of stereo-camera systems where the baseline distance between the cameras is used to propagate scale throughout the resulting point cloud. However using a stereo camera system is not always possible. For example the platform may not be large enough to position the cameras at a distance that allows adequate triangulation of common points so single camera (monocular) systems are used as an alternative. 
+ 
+\section{Problem Statement \label{problem}}
+Real-world measurements are needed from Point Cloud Data (PCD) that has been formed by reconstructing multiple images from a single camera to represent a scene. The reconstruction process does not provide a real-world scale.
+
+\section{Research Objective}
+The objective of this report is to develop a proof-of-concept test for a fully automatic method of determining a non-arbitrary scale for unstructured PCD of an indoor scene. 
+
+\section{Methodology}
+The research conducted took form in three stages:
+\begin{itemize}
+	\item A literature review was conducted to research how cutting-edge technologies such as Augmented Reality (AR) solved the problem of obtaining a real-world scale for unstructured point clouds. It also details research into point cloud processing techniques that were used in the course of this report. 
+	\item A proof-of-concept test which uses object recognition to identify objects in a scene whose height value is expected to lie within a particular range. This height value could then be used to propagate a real-world scale throughout the scene for other objects whose dimensions are not known.
+	\item The viability of the proof-of-concept test is assessed based on the difference between measured and reference heights. An analysis of variance test is performed in order to determine whether the heights for objects between rooms belonged to the same population. 
+	\item Lastly recommendations for further development are proposed in order to develop a solution that can be mass produced.
+\end{itemize}
+
+\section{Expected Outcomes}
+\vspace{-3mm}
+To determine whether it is possible to develop a fully-automatic way of deriving scale for PCD using object recognition. The difference between the reference and measured heights of objects is not expected to exceed $10\%$.
+\vspace{-3mm}
+\section{Scope and Limitations}
+\vspace{-3mm}
+The scope of this research will be limited to deriving a scale for indoor scenes only. It will not feature a fully-realised solution but rather take the form of a proof-of-concept test which illustrates that scale for a scene can be obtained through fully-automatic means by leveraging object recognition. Each object will be recognised solely by their height which will fall within a particular range.
+\vspace{-3mm}
+\section{Outline of Report}
+\vspace{-3mm}
+The structure of the report will be as follows:
+\begin{itemize}
+	\item \textbf{Chapter 2} will feature a literature review that is split into three parts. The first details sources of PCD whilst the second covers methods of scene reconstruction from multiple images and how a real-world scale is currently obtained. The third section will discuss cutting-edge technologies that have had to solve the problem of obtaining a real-world scale before ending with specific papers that have contributed significant research to the method proposed herein.
+	\item \textbf{Chapter 3} covers the method used to demonstrate a proof-of-concept test to develop a fully automatic way of estimating a real-world scale for unstructured points clouds. 
+	\item \textbf{Chapter 4} discusses the results obtained using the method detailed in chapter 3.
+	\item \textbf{Chapter 5} states the conclusions that were made concerning the results. It also details future recommendations for further development in order to offer a fully-realised solution.
+	\item Lastly \textbf{Chapter 6} details recommendations to the proposed concept. Challenges and implications of developing smartphone and web-based applications are also discussed.
+\end{itemize}
